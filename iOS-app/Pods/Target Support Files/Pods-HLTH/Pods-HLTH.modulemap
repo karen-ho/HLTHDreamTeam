@@ -1,0 +1,6 @@
+framework module Pods_HLTH {
+  umbrella header "Pods-HLTH-umbrella.h"
+
+  export *
+  module * { export * }
+}
