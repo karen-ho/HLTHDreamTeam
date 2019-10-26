@@ -1,0 +1,3 @@
+[submodule "hckhlth-2019-service"]
+	path = hckhlth-2019-service
+	url = https://github.com/rtchang/hckhlth-2019-service
