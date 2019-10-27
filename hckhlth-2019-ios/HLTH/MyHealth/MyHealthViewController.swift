@@ -21,6 +21,9 @@ class MyHealthViewController: UIViewController {
         let averageGraphNib = UINib(nibName: "AverageGraphCell", bundle: bundle)
         healthTable.register(averageGraphNib, forCellReuseIdentifier: "averageGraph")
         
+        let healthSummaryNib = UINib(nibName: "HealthSummaryCell", bundle: bundle)
+        healthTable.register(healthSummaryNib, forCellReuseIdentifier: "healthSummary")
+        
         healthTable.rowHeight = UITableView.automaticDimension
         healthTable.estimatedRowHeight = 600
         
@@ -74,6 +77,10 @@ extension MyHealthViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "averageGraph") as! AverageGraphCell
+            cell.selectionStyle = .none
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "healthSummary") as! HealthSummaryCell
             cell.selectionStyle = .none
             return cell
         default:

@@ -69,6 +69,12 @@ class HomeViewController: UIViewController {
         super.viewDidAppear(animated)
         
         homeTable.reloadData()
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        if HAS_ACTION_ITEMS {
+            ref.child("doctor").child("read").removeValue()
+        }
     }
     
     @IBAction func syncGlucose(_ sender: UIButton) {
@@ -129,7 +135,7 @@ class HomeViewController: UIViewController {
 
 // MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if HAS_ACTION_ITEMS && indexPath.section == 3 {
             let storyboard = UIStoryboard(name: "Schedule", bundle: Bundle(for: self.classForCoder))
             let scheduleViewController = storyboard.instantiateViewController(withIdentifier: "ScheduleView") as! ScheduleViewController

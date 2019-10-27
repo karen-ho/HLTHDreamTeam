@@ -12,6 +12,8 @@
 		9C61C5BC2365EC26002EB632 /* AverageGraphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C61C5BB2365EC26002EB632 /* AverageGraphCell.xib */; };
 		9C61C5BE2365F15E002EB632 /* DoctorMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C61C5BD2365F15E002EB632 /* DoctorMessageViewController.swift */; };
 		9C61C5C02365F178002EB632 /* DoctorMessage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C61C5BF2365F178002EB632 /* DoctorMessage.storyboard */; };
+		9C61C5C22365FB98002EB632 /* HealthSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C61C5C12365FB98002EB632 /* HealthSummaryCell.swift */; };
+		9C61C5C42365FBB6002EB632 /* HealthSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C61C5C32365FBB6002EB632 /* HealthSummaryCell.xib */; };
 		9C86CE5F2364FAE20052EEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CE5E2364FAE20052EEEE /* AppDelegate.swift */; };
 		9C86CE632364FAE20052EEEE /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CE622364FAE20052EEEE /* LaunchViewController.swift */; };
 		9C86CE662364FAE20052EEEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CE642364FAE20052EEEE /* Main.storyboard */; };
@@ -79,6 +81,8 @@
 		9C61C5BB2365EC26002EB632 /* AverageGraphCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AverageGraphCell.xib; sourceTree = "<group>"; };
 		9C61C5BD2365F15E002EB632 /* DoctorMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorMessageViewController.swift; sourceTree = "<group>"; };
 		9C61C5BF2365F178002EB632 /* DoctorMessage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DoctorMessage.storyboard; sourceTree = "<group>"; };
+		9C61C5C12365FB98002EB632 /* HealthSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthSummaryCell.swift; sourceTree = "<group>"; };
+		9C61C5C32365FBB6002EB632 /* HealthSummaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthSummaryCell.xib; sourceTree = "<group>"; };
 		9C86CE5B2364FAE20052EEEE /* HLTH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HLTH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C86CE5E2364FAE20052EEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C86CE622364FAE20052EEEE /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -271,10 +275,12 @@
 		9C86CEA023655B200052EEEE /* MyHealth */ = {
 			isa = PBXGroup;
 			children = (
-				9C86CE9E23655AF80052EEEE /* MyHealth.storyboard */,
-				9C86CE9C23655AD10052EEEE /* MyHealthViewController.swift */,
 				9C61C5B92365EC03002EB632 /* AverageGraphCell.swift */,
 				9C61C5BB2365EC26002EB632 /* AverageGraphCell.xib */,
+				9C61C5C12365FB98002EB632 /* HealthSummaryCell.swift */,
+				9C61C5C32365FBB6002EB632 /* HealthSummaryCell.xib */,
+				9C86CE9E23655AF80052EEEE /* MyHealth.storyboard */,
+				9C86CE9C23655AD10052EEEE /* MyHealthViewController.swift */,
 			);
 			path = MyHealth;
 			sourceTree = "<group>";
@@ -439,6 +445,7 @@
 				9C86CEF523657E6F0052EEEE /* Settings.storyboard in Resources */,
 				9C86CF102365A22E0052EEEE /* CommunityCell.xib in Resources */,
 				9C86CE98236552950052EEEE /* Home.storyboard in Resources */,
+				9C61C5C42365FBB6002EB632 /* HealthSummaryCell.xib in Resources */,
 				9C61C5BC2365EC26002EB632 /* AverageGraphCell.xib in Resources */,
 				9C86CE9F23655AF80052EEEE /* MyHealth.storyboard in Resources */,
 				9C86CF08236593A70052EEEE /* HomeEmptyActionCell.xib in Resources */,
@@ -537,6 +544,7 @@
 				9C86CE922365502A0052EEEE /* TabViewController.swift in Sources */,
 				9C86CEFA236591210052EEEE /* HomeHeaderCell.swift in Sources */,
 				9C86CF162365E77E0052EEEE /* ScheduleViewController.swift in Sources */,
+				9C61C5C22365FB98002EB632 /* HealthSummaryCell.swift in Sources */,
 				9C86CEEF2365737E0052EEEE /* UIView+Extension.swift in Sources */,
 				9C86CE9A236552BE0052EEEE /* HomeViewController.swift in Sources */,
 				9C61C5BE2365F15E002EB632 /* DoctorMessageViewController.swift in Sources */,

@@ -8,10 +8,16 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 class DoctorMessageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        ref.child("doctor").child("read").setValue(true)
     }
     
     @IBAction func goBack(_ sender: UIButton) {

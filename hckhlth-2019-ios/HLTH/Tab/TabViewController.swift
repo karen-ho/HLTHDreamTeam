@@ -75,5 +75,41 @@ class TabViewController: UITabBarController {
                 }
             }
         }
+        
+        ref.child("doctor").child("notification").observe(.value) { (snapshot) in
+            guard currentUser == USER_1 else { return }
+            if let value = snapshot.value as? Bool, value == true {
+                DispatchQueue.main.async {
+                    if let communityTab = self.tabBar.items?[2] {
+                        communityTab.badgeColor = TEAL
+                        communityTab.badgeValue = "1"
+                    }
+                }
+            } else {
+                DispatchQueue.main.async {
+                    if let communityTab = self.tabBar.items?[2] {
+                        communityTab.badgeValue = nil
+                    }
+                }
+            }
+        }
+        
+        ref.child("doctor").child("read").observe(.value) { (snapshot) in
+            guard currentUser == USER_1 else { return }
+            if let value = snapshot.value as? Bool, value == true {
+                DispatchQueue.main.async {
+                    if let communityTab = self.tabBar.items?[0] {
+                        communityTab.badgeColor = TEAL
+                        communityTab.badgeValue = "1"
+                    }
+                }
+            } else {
+                DispatchQueue.main.async {
+                    if let communityTab = self.tabBar.items?[0] {
+                        communityTab.badgeValue = nil
+                    }
+                }
+            }
+        }
     }
 }

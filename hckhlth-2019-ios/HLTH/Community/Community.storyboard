@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Community View Controller-->
+        <!--Your Friends-->
         <scene sceneID="zmV-Y1-AII">
             <objects>
                 <viewController storyboardIdentifier="CommunityView" id="6y9-FJ-hUh" customClass="CommunityViewController" customModule="HLTH" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,17 +24,29 @@
                                     <outlet property="delegate" destination="6y9-FJ-hUh" id="ea9-Gb-D9q"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jO0-dk-X1D">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aTK-yX-Kkm"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sendDoctorMessage:" destination="6y9-FJ-hUh" eventType="touchUpInside" id="b9G-eL-tIt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="X2p-lA-3zl" firstAttribute="bottom" secondItem="jO0-dk-X1D" secondAttribute="bottom" id="DZY-5b-y6a"/>
                             <constraint firstItem="X2p-lA-3zl" firstAttribute="bottom" secondItem="gEd-0f-Xj5" secondAttribute="bottom" id="aAw-B2-jHt"/>
                             <constraint firstItem="gEd-0f-Xj5" firstAttribute="leading" secondItem="X2p-lA-3zl" secondAttribute="leading" id="b9c-2F-XRo"/>
                             <constraint firstItem="gEd-0f-Xj5" firstAttribute="trailing" secondItem="X2p-lA-3zl" secondAttribute="trailing" id="bUN-qK-5jg"/>
+                            <constraint firstItem="X2p-lA-3zl" firstAttribute="trailing" secondItem="jO0-dk-X1D" secondAttribute="trailing" id="eD0-xv-PjR"/>
                             <constraint firstItem="gEd-0f-Xj5" firstAttribute="top" secondItem="X2p-lA-3zl" secondAttribute="top" id="qJL-HM-rCS"/>
+                            <constraint firstItem="jO0-dk-X1D" firstAttribute="leading" secondItem="X2p-lA-3zl" secondAttribute="leading" id="uXQ-uw-8ZR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X2p-lA-3zl"/>
                     </view>
-                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="hs6-Gk-Xdc">
+                    <navigationItem key="navigationItem" title="Your Friends" leftItemsSupplementBackButton="YES" id="hs6-Gk-Xdc">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="AoN-mm-SmD">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OKK-zk-WWG">
                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
