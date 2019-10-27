@@ -45,6 +45,13 @@ class CommunityViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func sendDoctorMessage(_ sender: UIButton) {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        ref.child("doctor").child("notification").setValue(true)
+    }
 }
 
 // MARK: - UITableViewDelegate
@@ -57,7 +64,19 @@ extension CommunityViewController: UITableViewDelegate {
         if indexPath.section == 0 && indexPath.row == 0 && currentUser == USER_2 {
             ref.child("achievement").child("liked").setValue(true)
             HAS_LIKED = true
-            communityTable.reloadData()
+            if let cell = tableView.cellForRow(at: indexPath) as? CommunityCell {
+                cell.likeImage.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+                UIView.animate(withDuration: 2.0,
+                delay: 0,
+                usingSpringWithDamping: 0.2,
+                initialSpringVelocity: 4.0,
+                options: .allowUserInteraction,
+                animations: {
+                    cell.likeImage.transform = .identity
+                    cell.likeImage.image = UIImage(named: "liked")
+                },
+                completion: nil)
+            }
         }
     }
 }

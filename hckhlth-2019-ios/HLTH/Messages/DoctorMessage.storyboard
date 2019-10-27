@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DoctorMessageView-->
+        <scene sceneID="f4q-lf-IjK">
+            <objects>
+                <viewController storyboardIdentifier="DoctorMessageView" title="DoctorMessageView" id="fHi-hi-WBz" customClass="DoctorMessageViewController" customModule="HLTH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iJG-oe-DfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctor" translatesAutoresizingMaskIntoConstraints="NO" id="jfY-uM-RVS">
+                                <rect key="frame" x="16" y="104" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="f92-YO-4pW"/>
+                                    <constraint firstAttribute="width" constant="64" id="sE9-Bw-c3w"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ugv-Bk-d6p">
+                                <rect key="frame" x="88" y="108.5" width="178" height="55.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lartily Smith, M.D." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yY9-L8-nWq">
+                                        <rect key="frame" x="0.0" y="0.0" width="178" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/27/19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOi-Rq-SEa">
+                                        <rect key="frame" x="0.0" y="26.5" width="178" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiB-gb-A1Y">
+                                <rect key="frame" x="16" y="192" width="382" height="227"/>
+                                <string key="text">Hi Dan,
+
+Hope you’ve been well. I’m writing to let you know that you’re due for an annual exam. I’ve added it as an action item for you. Let me know if you have any questions, I hope to see you soon!
+
+Best,
+Dr. Smith</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="typeMessage" translatesAutoresizingMaskIntoConstraints="NO" id="TFa-F6-U9X">
+                                <rect key="frame" x="16" y="786" width="382" height="44"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ugv-Bk-d6p" firstAttribute="leading" secondItem="jfY-uM-RVS" secondAttribute="trailing" constant="8" id="11S-Fs-gRj"/>
+                            <constraint firstItem="ugv-Bk-d6p" firstAttribute="centerY" secondItem="jfY-uM-RVS" secondAttribute="centerY" id="2H6-NC-c5i"/>
+                            <constraint firstItem="jfY-uM-RVS" firstAttribute="top" secondItem="zc8-Zi-zU1" secondAttribute="top" constant="16" id="55U-aE-6i7"/>
+                            <constraint firstItem="yiB-gb-A1Y" firstAttribute="top" secondItem="jfY-uM-RVS" secondAttribute="bottom" constant="24" id="Czh-ZG-SU6"/>
+                            <constraint firstItem="yiB-gb-A1Y" firstAttribute="leading" secondItem="zc8-Zi-zU1" secondAttribute="leading" constant="16" id="IiI-tz-OO1"/>
+                            <constraint firstItem="zc8-Zi-zU1" firstAttribute="bottom" secondItem="TFa-F6-U9X" secondAttribute="bottom" constant="32" id="Iu3-4j-u3o"/>
+                            <constraint firstItem="zc8-Zi-zU1" firstAttribute="trailing" secondItem="yiB-gb-A1Y" secondAttribute="trailing" constant="16" id="Y8G-24-mOr"/>
+                            <constraint firstItem="TFa-F6-U9X" firstAttribute="leading" secondItem="zc8-Zi-zU1" secondAttribute="leading" constant="16" id="fTK-z8-6Dl"/>
+                            <constraint firstItem="jfY-uM-RVS" firstAttribute="leading" secondItem="zc8-Zi-zU1" secondAttribute="leading" constant="16" id="hac-D2-pZp"/>
+                            <constraint firstItem="zc8-Zi-zU1" firstAttribute="trailing" secondItem="TFa-F6-U9X" secondAttribute="trailing" constant="16" id="iJM-pb-NlR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zc8-Zi-zU1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Annual Exam Reminder" id="jD9-cZ-0Q5">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="T2z-sG-Rhi">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BZR-u6-MWB">
+                                <rect key="frame" x="20" y="0.0" width="48" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="goBack:" destination="fHi-hi-WBz" eventType="touchUpInside" id="WlC-1j-J5b"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="va6-gQ-cmN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1373.913043478261" y="-156.02678571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lpm-vM-dp5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ndt-zS-FC4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U8d-mR-Hls">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fHi-hi-WBz" kind="relationship" relationship="rootViewController" id="Ohc-NV-ZkY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQN-Hr-PeU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463.768115942029" y="-156.02678571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="24" height="24"/>
+        <image name="doctor" width="64" height="64"/>
+        <image name="typeMessage" width="349" height="44"/>
+    </resources>
+</document>

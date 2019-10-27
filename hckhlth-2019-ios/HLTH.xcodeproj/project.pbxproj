@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		774CF6E4FD37BA6B1C6814F1 /* Pods_HLTH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A438CBFB503817030919D4F /* Pods_HLTH.framework */; };
+		9C61C5BA2365EC03002EB632 /* AverageGraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C61C5B92365EC03002EB632 /* AverageGraphCell.swift */; };
+		9C61C5BC2365EC26002EB632 /* AverageGraphCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C61C5BB2365EC26002EB632 /* AverageGraphCell.xib */; };
+		9C61C5BE2365F15E002EB632 /* DoctorMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C61C5BD2365F15E002EB632 /* DoctorMessageViewController.swift */; };
+		9C61C5C02365F178002EB632 /* DoctorMessage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C61C5BF2365F178002EB632 /* DoctorMessage.storyboard */; };
 		9C86CE5F2364FAE20052EEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CE5E2364FAE20052EEEE /* AppDelegate.swift */; };
 		9C86CE632364FAE20052EEEE /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CE622364FAE20052EEEE /* LaunchViewController.swift */; };
 		9C86CE662364FAE20052EEEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CE642364FAE20052EEEE /* Main.storyboard */; };
@@ -45,6 +49,10 @@
 		9C86CF0C236596B90052EEEE /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CF0B236596B90052EEEE /* UserManager.swift */; };
 		9C86CF0E2365A2070052EEEE /* CommunityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CF0D2365A2070052EEEE /* CommunityCell.swift */; };
 		9C86CF102365A22E0052EEEE /* CommunityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CF0F2365A22E0052EEEE /* CommunityCell.xib */; };
+		9C86CF122365E47D0052EEEE /* HomeActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CF112365E47D0052EEEE /* HomeActionCell.swift */; };
+		9C86CF142365E4C00052EEEE /* HomeActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CF132365E4C00052EEEE /* HomeActionCell.xib */; };
+		9C86CF162365E77E0052EEEE /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CF152365E77E0052EEEE /* ScheduleViewController.swift */; };
+		9C86CF182365E7A40052EEEE /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CF172365E7A40052EEEE /* Schedule.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +75,10 @@
 /* Begin PBXFileReference section */
 		1244563374D4783005049962 /* Pods-HLTH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLTH.debug.xcconfig"; path = "Target Support Files/Pods-HLTH/Pods-HLTH.debug.xcconfig"; sourceTree = "<group>"; };
 		1A438CBFB503817030919D4F /* Pods_HLTH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HLTH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C61C5B92365EC03002EB632 /* AverageGraphCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageGraphCell.swift; sourceTree = "<group>"; };
+		9C61C5BB2365EC26002EB632 /* AverageGraphCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AverageGraphCell.xib; sourceTree = "<group>"; };
+		9C61C5BD2365F15E002EB632 /* DoctorMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorMessageViewController.swift; sourceTree = "<group>"; };
+		9C61C5BF2365F178002EB632 /* DoctorMessage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DoctorMessage.storyboard; sourceTree = "<group>"; };
 		9C86CE5B2364FAE20052EEEE /* HLTH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HLTH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C86CE5E2364FAE20052EEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C86CE622364FAE20052EEEE /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +122,10 @@
 		9C86CF0B236596B90052EEEE /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		9C86CF0D2365A2070052EEEE /* CommunityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCell.swift; sourceTree = "<group>"; };
 		9C86CF0F2365A22E0052EEEE /* CommunityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityCell.xib; sourceTree = "<group>"; };
+		9C86CF112365E47D0052EEEE /* HomeActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActionCell.swift; sourceTree = "<group>"; };
+		9C86CF132365E4C00052EEEE /* HomeActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeActionCell.xib; sourceTree = "<group>"; };
+		9C86CF152365E77E0052EEEE /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		9C86CF172365E7A40052EEEE /* Schedule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
 		D6210942DD03506327F6BEDB /* Pods-HLTH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLTH.release.xcconfig"; path = "Target Support Files/Pods-HLTH/Pods-HLTH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +204,7 @@
 				9C86CE95236552470052EEEE /* Tab */,
 				9C86CEEE2365737E0052EEEE /* UIView+Extension.swift */,
 				9C86CF0B236596B90052EEEE /* UserManager.swift */,
+				9C86CF192365E7B40052EEEE /* Schedule */,
 			);
 			path = HLTH;
 			sourceTree = "<group>";
@@ -245,6 +262,8 @@
 				9C86CEEC2365704A0052EEEE /* SyncGlucoseView.xib */,
 				9C86CEF02365795F0052EEEE /* GlucoseAchievementView.swift */,
 				9C86CEF22365798B0052EEEE /* GlucoseAchievementView.xib */,
+				9C86CF112365E47D0052EEEE /* HomeActionCell.swift */,
+				9C86CF132365E4C00052EEEE /* HomeActionCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -254,6 +273,8 @@
 			children = (
 				9C86CE9E23655AF80052EEEE /* MyHealth.storyboard */,
 				9C86CE9C23655AD10052EEEE /* MyHealthViewController.swift */,
+				9C61C5B92365EC03002EB632 /* AverageGraphCell.swift */,
+				9C61C5BB2365EC26002EB632 /* AverageGraphCell.xib */,
 			);
 			path = MyHealth;
 			sourceTree = "<group>";
@@ -263,6 +284,8 @@
 			children = (
 				9C86CEE1236569620052EEEE /* Messages.storyboard */,
 				9C86CEE32365696F0052EEEE /* MessagesViewController.swift */,
+				9C61C5BD2365F15E002EB632 /* DoctorMessageViewController.swift */,
+				9C61C5BF2365F178002EB632 /* DoctorMessage.storyboard */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -285,6 +308,15 @@
 				9C86CEF623657E800052EEEE /* SettingsViewController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		9C86CF192365E7B40052EEEE /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				9C86CF152365E77E0052EEEE /* ScheduleViewController.swift */,
+				9C86CF172365E7A40052EEEE /* Schedule.storyboard */,
+			);
+			path = Schedule;
 			sourceTree = "<group>";
 		};
 		CFABA62AEBA0DFF8382B9A23 /* Frameworks */ = {
@@ -401,15 +433,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C86CF182365E7A40052EEEE /* Schedule.storyboard in Resources */,
 				9C86CEE923656A5C0052EEEE /* Community.storyboard in Resources */,
 				9C86CE942365513F0052EEEE /* Tab.storyboard in Resources */,
 				9C86CEF523657E6F0052EEEE /* Settings.storyboard in Resources */,
 				9C86CF102365A22E0052EEEE /* CommunityCell.xib in Resources */,
 				9C86CE98236552950052EEEE /* Home.storyboard in Resources */,
+				9C61C5BC2365EC26002EB632 /* AverageGraphCell.xib in Resources */,
 				9C86CE9F23655AF80052EEEE /* MyHealth.storyboard in Resources */,
 				9C86CF08236593A70052EEEE /* HomeEmptyActionCell.xib in Resources */,
 				9C86CF04236593090052EEEE /* HomeActionHeaderCell.xib in Resources */,
+				9C86CF142365E4C00052EEEE /* HomeActionCell.xib in Resources */,
 				9C86CEFC236591400052EEEE /* HomeHeaderCell.xib in Resources */,
+				9C61C5C02365F178002EB632 /* DoctorMessage.storyboard in Resources */,
 				9C86CE6E2364FAE60052EEEE /* LaunchScreen.storyboard in Resources */,
 				9C86CF0A2365952F0052EEEE /* GoogleService-Info.plist in Resources */,
 				9C86CEFE236592420052EEEE /* HomeGraphCell.xib in Resources */,
@@ -485,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C86CEEB2365701F0052EEEE /* SyncGlucoseView.swift in Sources */,
+				9C86CF122365E47D0052EEEE /* HomeActionCell.swift in Sources */,
 				9C86CE632364FAE20052EEEE /* LaunchViewController.swift in Sources */,
 				9C86CEE42365696F0052EEEE /* MessagesViewController.swift in Sources */,
 				9C86CF002365926B0052EEEE /* HomeGraphCell.swift in Sources */,
@@ -496,10 +533,13 @@
 				9C86CF02236592F60052EEEE /* HomeActionHeaderCell.swift in Sources */,
 				9C86CF062365938A0052EEEE /* HomeEmptyActionCell.swift in Sources */,
 				9C86CF0E2365A2070052EEEE /* CommunityCell.swift in Sources */,
+				9C61C5BA2365EC03002EB632 /* AverageGraphCell.swift in Sources */,
 				9C86CE922365502A0052EEEE /* TabViewController.swift in Sources */,
 				9C86CEFA236591210052EEEE /* HomeHeaderCell.swift in Sources */,
+				9C86CF162365E77E0052EEEE /* ScheduleViewController.swift in Sources */,
 				9C86CEEF2365737E0052EEEE /* UIView+Extension.swift in Sources */,
 				9C86CE9A236552BE0052EEEE /* HomeViewController.swift in Sources */,
+				9C61C5BE2365F15E002EB632 /* DoctorMessageViewController.swift in Sources */,
 				9C86CEF723657E800052EEEE /* SettingsViewController.swift in Sources */,
 				9C86CF0C236596B90052EEEE /* UserManager.swift in Sources */,
 			);

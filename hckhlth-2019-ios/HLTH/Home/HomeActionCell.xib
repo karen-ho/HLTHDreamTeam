@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeAction" rowHeight="93" id="8oT-9P-Mh9" customClass="HomeActionCell" customModule="HLTH" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8oT-9P-Mh9" id="uCW-dM-9PN">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cf-jE-9M3">
+                        <rect key="frame" x="24" y="22" width="70" height="24"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.58823529409999997" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="UKX-s4-PN4"/>
+                            <constraint firstAttribute="width" constant="70" id="WYC-cU-EHS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <state key="normal" title="New">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule Annual Exam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTD-nq-2qv">
+                        <rect key="frame" x="102" y="23.5" width="288" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2Cf-jE-9M3" firstAttribute="leading" secondItem="uCW-dM-9PN" secondAttribute="leading" constant="24" id="Mf3-0e-HqW"/>
+                    <constraint firstAttribute="bottom" secondItem="2Cf-jE-9M3" secondAttribute="bottom" constant="22" id="SEo-os-D0c"/>
+                    <constraint firstItem="2Cf-jE-9M3" firstAttribute="top" secondItem="uCW-dM-9PN" secondAttribute="top" constant="22" id="rQs-gi-x6R"/>
+                    <constraint firstItem="FTD-nq-2qv" firstAttribute="leading" secondItem="2Cf-jE-9M3" secondAttribute="trailing" constant="8" id="rmO-a6-N8p"/>
+                    <constraint firstItem="FTD-nq-2qv" firstAttribute="centerY" secondItem="2Cf-jE-9M3" secondAttribute="centerY" id="u0d-2E-diw"/>
+                    <constraint firstAttribute="trailing" secondItem="FTD-nq-2qv" secondAttribute="trailing" constant="24" id="zn2-K0-eBf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="newButton" destination="2Cf-jE-9M3" id="JJs-UP-r9M"/>
+            </connections>
+            <point key="canvasLocation" x="169.56521739130437" y="175.11160714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

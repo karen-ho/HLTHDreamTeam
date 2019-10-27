@@ -39,6 +39,10 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.88235294117647056" green="0.96470588235294119" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="actionLabel" destination="RB8-Jf-CsZ" id="inp-qy-PHu"/>
+                <outlet property="flagImage" destination="cV2-nS-p5E" id="WVH-rO-2QU"/>
+            </connections>
             <point key="canvasLocation" x="-52.173913043478265" y="114.84375"/>
         </tableViewCell>
     </objects>

@@ -122,6 +122,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="PwG-Pm-rsh"/>
             <connections>
+                <outlet property="achievementImage" destination="FZ6-lE-8oM" id="YF7-Bk-XY4"/>
                 <outlet property="achievementView" destination="ekp-xe-YRj" id="Soj-Bc-C3V"/>
                 <outlet property="overlayView" destination="S9D-JI-KbU" id="MCk-u0-RlH"/>
                 <outlet property="shareButton" destination="u7x-Rs-W7P" id="nJQ-5s-Q1I"/>

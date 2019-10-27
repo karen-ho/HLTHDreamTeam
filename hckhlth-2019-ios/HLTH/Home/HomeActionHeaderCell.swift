@@ -10,5 +10,6 @@ import Foundation
 import UIKit
 
 class HomeActionHeaderCell: UITableViewCell {
-    
+    @IBOutlet weak var actionLabel: UILabel!
+    @IBOutlet weak var flagImage: UIImageView!
 }

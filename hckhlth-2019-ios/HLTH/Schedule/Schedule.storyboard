@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Schedule Annual Exam-->
+        <scene sceneID="IlO-5T-G2t">
+            <objects>
+                <viewController storyboardIdentifier="ScheduleView" id="e6Z-v3-LNX" customClass="ScheduleViewController" customModule="HLTH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pPj-Fb-NaC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4B-Hi-VA9">
+                                <rect key="frame" x="24" y="112" width="366" height="203"/>
+                                <string key="text">We know you may not feel different, but you are helping control your diabetes by working closely with us on your care. Plus, you may even save on health care costs.
+
+Please schedule an annual exam with Dr. Smith by Nov 30, 2019. 
+
+We’re so glad you’re making your health a priority.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8L-30-5iO">
+                                <rect key="frame" x="24" y="790" width="366" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="3pz-eJ-HnE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Remind me later">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAI-JA-CAq">
+                                <rect key="frame" x="16" y="726" width="382" height="56"/>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.58823529409999997" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Ufs-7V-nMo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Schedule Exam">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="z4B-Hi-VA9" firstAttribute="leading" secondItem="t10-yB-QjG" secondAttribute="leading" constant="24" id="6jc-bQ-HxT"/>
+                            <constraint firstItem="z4B-Hi-VA9" firstAttribute="top" secondItem="t10-yB-QjG" secondAttribute="top" constant="24" id="75b-cc-LXl"/>
+                            <constraint firstAttribute="trailing" secondItem="z4B-Hi-VA9" secondAttribute="trailing" constant="24" id="Nsx-t7-T5R"/>
+                            <constraint firstItem="e8L-30-5iO" firstAttribute="leading" secondItem="t10-yB-QjG" secondAttribute="leading" constant="24" id="Rqz-gv-cZe"/>
+                            <constraint firstItem="t10-yB-QjG" firstAttribute="bottom" secondItem="e8L-30-5iO" secondAttribute="bottom" constant="16" id="XVP-4d-Thz"/>
+                            <constraint firstItem="pAI-JA-CAq" firstAttribute="leading" secondItem="t10-yB-QjG" secondAttribute="leading" constant="16" id="ci5-GJ-USF"/>
+                            <constraint firstItem="t10-yB-QjG" firstAttribute="trailing" secondItem="e8L-30-5iO" secondAttribute="trailing" constant="24" id="fAF-FD-Wci"/>
+                            <constraint firstItem="e8L-30-5iO" firstAttribute="top" secondItem="pAI-JA-CAq" secondAttribute="bottom" constant="8" id="j7e-Bl-cuw"/>
+                            <constraint firstItem="t10-yB-QjG" firstAttribute="trailing" secondItem="pAI-JA-CAq" secondAttribute="trailing" constant="16" id="zm5-gB-QsO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="t10-yB-QjG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Schedule Annual Exam" id="ECP-dx-tGZ">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="z1C-KI-Cqu">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mbU-Xt-Y5g">
+                                <rect key="frame" x="20" y="0.0" width="48" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="goBack:" destination="e6Z-v3-LNX" eventType="touchUpInside" id="c4q-Px-BFT"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scheduleButton" destination="pAI-JA-CAq" id="x3u-7L-h6v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eRs-IW-m2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1115.9420289855072" y="-195.53571428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8bm-DS-gWc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mr0-5n-z83" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hdq-zv-vOh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e6Z-v3-LNX" kind="relationship" relationship="rootViewController" id="e1d-dc-mVH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEy-Ld-vmb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205.79710144927537" y="-195.53571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="24" height="24"/>
+    </resources>
+</document>

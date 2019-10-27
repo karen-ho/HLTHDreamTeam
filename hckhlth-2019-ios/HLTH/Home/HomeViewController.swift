@@ -11,6 +11,7 @@ import UIKit
 import FirebaseDatabase
 
 var HAS_ENTERED_GLUCOSE = false
+var HAS_ACTION_ITEMS = false
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var homeTable: UITableView!
@@ -35,6 +36,9 @@ class HomeViewController: UIViewController {
         
         let homeEmptyActionNib = UINib(nibName: "HomeEmptyActionCell", bundle: bundle)
         homeTable.register(homeEmptyActionNib, forCellReuseIdentifier: "homeEmptyAction")
+        
+        let homeActionNib = UINib(nibName: "HomeActionCell", bundle: bundle)
+        homeTable.register(homeActionNib, forCellReuseIdentifier: "homeAction")
         
         homeTable.rowHeight = UITableView.automaticDimension
         homeTable.estimatedRowHeight = 600
@@ -70,22 +74,28 @@ class HomeViewController: UIViewController {
     @IBAction func syncGlucose(_ sender: UIButton) {
         if let syncGlucoseView = syncGlucoseView {
             syncGlucoseView.logView.center.y += syncGlucoseView.logView.frame.height
+            syncGlucoseView.overlayView.backgroundColor = UIColor.clear
             tabBarController?.view.addSubview(syncGlucoseView)
             
-            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
+            UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseIn, animations: {
                 syncGlucoseView.logView.center.y -= syncGlucoseView.logView.frame.height
-            }, completion: nil)
+                syncGlucoseView.backgroundColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 0.8)
+            }) { (completion) in
+            }
         } else {
             let syncGlucoseView = SyncGlucoseView.loadFromNibNamed("SyncGlucoseView", bundle: Bundle(for: self.classForCoder)) as! SyncGlucoseView
             syncGlucoseView.frame = UIScreen.main.bounds
             syncGlucoseView.delegate = self
             
             syncGlucoseView.logView.center.y += syncGlucoseView.logView.frame.height
+            syncGlucoseView.overlayView.backgroundColor = UIColor.clear
             tabBarController?.view.addSubview(syncGlucoseView)
             
-            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
+            UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseIn, animations: {
                 syncGlucoseView.logView.center.y -= syncGlucoseView.logView.frame.height
-            }, completion: nil)
+                syncGlucoseView.backgroundColor = UIColor(red: 0.26, green: 0.26, blue: 0.26, alpha: 0.8)
+            }) { (completion) in
+            }
             
             self.syncGlucoseView = syncGlucoseView
         }
@@ -104,12 +114,14 @@ class HomeViewController: UIViewController {
     func showGlucoseAchievementView() {
         if let glucoseAchievementView = glucoseAchievementView {
             tabBarController?.view.addSubview(glucoseAchievementView)
+            glucoseAchievementView.animate()
         } else {
             let glucoseAchievementView = GlucoseAchievementView.loadFromNibNamed("GlucoseAchievementView", bundle: Bundle(for: self.classForCoder)) as! GlucoseAchievementView
             glucoseAchievementView.frame = UIScreen.main.bounds
             glucoseAchievementView.delegate = self
             
             tabBarController?.view.addSubview(glucoseAchievementView)
+            glucoseAchievementView.animate()
             self.glucoseAchievementView = glucoseAchievementView
         }
     }
@@ -117,7 +129,13 @@ class HomeViewController: UIViewController {
 
 // MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if HAS_ACTION_ITEMS && indexPath.section == 3 {
+            let storyboard = UIStoryboard(name: "Schedule", bundle: Bundle(for: self.classForCoder))
+            let scheduleViewController = storyboard.instantiateViewController(withIdentifier: "ScheduleView") as! ScheduleViewController
+            navigationController?.pushViewController(scheduleViewController, animated: true)
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -146,18 +164,27 @@ extension HomeViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeHeader") as! HomeHeaderCell
             cell.selectionStyle = .none
             cell.averageLabel.text = HAS_ENTERED_GLUCOSE ? "154" : "167"
-            cell.deviationLabel.text = HAS_ENTERED_GLUCOSE ? "96" : "83"
+            cell.deviationLabel.text = HAS_ENTERED_GLUCOSE ? "±96" : "±83"
             cell.hypersLabel.text = HAS_ENTERED_GLUCOSE ? "28%" : "33%"
             cell.hyposLabel.text = HAS_ENTERED_GLUCOSE ? "14%" : "17%"
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeActionHeader") as! HomeActionHeaderCell
             cell.selectionStyle = .none
+            cell.actionLabel.text = HAS_ACTION_ITEMS ? "1 Action Item" : "0 Action Items"
+            cell.flagImage.image = cell.flagImage.image?.withRenderingMode(.alwaysTemplate)
+            cell.tintColor = HAS_ACTION_ITEMS ? TEAL : UIColor.black
             return cell
         case 3:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "homeEmptyAction") as! HomeEmptyActionCell
-            cell.selectionStyle = .none
-            return cell
+            if HAS_ACTION_ITEMS {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "homeAction") as! HomeActionCell
+                cell.selectionStyle = .none
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "homeEmptyAction") as! HomeEmptyActionCell
+                cell.selectionStyle = .none
+                return cell
+            }
         default:
             return UITableViewCell()
         }

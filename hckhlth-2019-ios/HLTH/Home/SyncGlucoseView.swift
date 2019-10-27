@@ -19,6 +19,7 @@ class SyncGlucoseView: UIView {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var logView: UIView!
+    @IBOutlet weak var overlayView: UIView!
     
     var delegate: GlucoseDelegate?
     
