@@ -57,7 +57,7 @@
                 <constraints>
                     <constraint firstItem="OFa-K1-yX3" firstAttribute="top" secondItem="F34-H0-9FH" secondAttribute="top" id="2zT-ZM-VWo"/>
                     <constraint firstItem="Xg7-RQ-v23" firstAttribute="top" secondItem="OFa-K1-yX3" secondAttribute="bottom" constant="32" id="4bc-LB-Wr5"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Xg7-RQ-v23" secondAttribute="bottom" constant="16" id="JxP-A3-W34"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Xg7-RQ-v23" secondAttribute="bottom" constant="8" id="JxP-A3-W34"/>
                     <constraint firstAttribute="trailing" secondItem="OFa-K1-yX3" secondAttribute="trailing" id="Vr4-gS-TxE"/>
                     <constraint firstItem="Xg7-RQ-v23" firstAttribute="centerX" secondItem="F34-H0-9FH" secondAttribute="centerX" id="aL6-zu-au1"/>
                     <constraint firstItem="OFa-K1-yX3" firstAttribute="leading" secondItem="F34-H0-9FH" secondAttribute="leading" id="vLm-LZ-ojp"/>

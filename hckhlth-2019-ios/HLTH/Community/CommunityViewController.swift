@@ -39,6 +39,8 @@ class CommunityViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.communityEvents.removeAll()
                     self.communityTable.reloadData()
+                    
+                    HAS_LIKED = false
                 }
             }
         }

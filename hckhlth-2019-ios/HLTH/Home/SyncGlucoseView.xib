@@ -263,6 +263,7 @@
             <viewLayoutGuide key="safeArea" id="NUx-ib-Ku3"/>
             <connections>
                 <outlet property="glucoseLabel" destination="Nq1-7P-Vuw" id="UWv-Av-wza"/>
+                <outlet property="logView" destination="6Er-Gp-LbF" id="3EB-Ps-XJt"/>
                 <outlet property="saveButton" destination="Dcf-fC-s5t" id="COK-ZO-Bz0"/>
                 <outlet property="spinner" destination="Xij-RJ-ZFY" id="1lb-XL-qEa"/>
                 <outlet property="syncButton" destination="gfx-Hv-71a" id="OMm-ib-GrH"/>

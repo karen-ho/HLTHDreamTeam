@@ -16,12 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HLW-RQ-mL7">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2cK-Ka-afm">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="JAK-Ac-cmx" id="0vv-5D-J8b"/>
-                                    <outlet property="delegate" destination="JAK-Ac-cmx" id="BxR-sW-JK0"/>
+                                    <outlet property="dataSource" destination="JAK-Ac-cmx" id="CCS-oA-7kP"/>
+                                    <outlet property="delegate" destination="JAK-Ac-cmx" id="8Xt-dM-3Du"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wF7-oe-R40">
@@ -39,15 +39,58 @@
                                     <action selector="syncGlucose:" destination="JAK-Ac-cmx" eventType="touchUpInside" id="Ytm-Gr-t4m"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Wd-hV-9bU">
+                                <rect key="frame" x="0.0" y="88" width="414" height="64"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alice" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UQL-jm-ara">
+                                        <rect key="frame" x="24" y="8.5" width="51" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="51" id="JxU-yc-L6E"/>
+                                            <constraint firstAttribute="height" constant="47" id="ZCr-LS-aqB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xf-uI-3Ss">
+                                        <rect key="frame" x="334" y="0.0" width="80" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="tzE-ma-Ru5"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="24" maxY="0.0"/>
+                                        <state key="normal" image="x"/>
+                                        <connections>
+                                            <action selector="closeNotification:" destination="JAK-Ac-cmx" eventType="touchUpInside" id="E9h-yN-NIS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alice liked your 30 Day Streak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGU-dH-fHk">
+                                        <rect key="frame" x="83" y="21.5" width="234" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.96470588239999999" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2Xf-uI-3Ss" secondAttribute="trailing" id="5dB-ep-7Sj"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Xf-uI-3Ss" secondAttribute="bottom" id="A6W-5D-EBs"/>
+                                    <constraint firstItem="PGU-dH-fHk" firstAttribute="centerY" secondItem="7Wd-hV-9bU" secondAttribute="centerY" id="Bst-gf-aPI"/>
+                                    <constraint firstItem="2Xf-uI-3Ss" firstAttribute="top" secondItem="7Wd-hV-9bU" secondAttribute="top" id="GBn-T5-8Jt"/>
+                                    <constraint firstAttribute="height" constant="64" id="PNI-Ju-uTo"/>
+                                    <constraint firstItem="PGU-dH-fHk" firstAttribute="leading" secondItem="UQL-jm-ara" secondAttribute="trailing" constant="8" id="isu-eB-bTB"/>
+                                    <constraint firstItem="UQL-jm-ara" firstAttribute="leading" secondItem="7Wd-hV-9bU" secondAttribute="leading" constant="24" id="v7N-Ku-Ykn"/>
+                                    <constraint firstItem="UQL-jm-ara" firstAttribute="centerY" secondItem="7Wd-hV-9bU" secondAttribute="centerY" id="yXr-Mi-uUK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="HLW-RQ-mL7" firstAttribute="leading" secondItem="Sx5-Xw-zil" secondAttribute="leading" id="H2o-1W-Pno"/>
-                            <constraint firstItem="Sx5-Xw-zil" firstAttribute="trailing" secondItem="HLW-RQ-mL7" secondAttribute="trailing" id="Lot-Qn-x1W"/>
-                            <constraint firstItem="Sx5-Xw-zil" firstAttribute="bottom" secondItem="HLW-RQ-mL7" secondAttribute="bottom" id="Nwa-6q-Fsr"/>
+                            <constraint firstItem="Sx5-Xw-zil" firstAttribute="trailing" secondItem="2cK-Ka-afm" secondAttribute="trailing" id="1Lj-Ad-V9e"/>
+                            <constraint firstItem="2cK-Ka-afm" firstAttribute="bottom" secondItem="Sx5-Xw-zil" secondAttribute="bottom" id="CR9-Oi-dG7"/>
+                            <constraint firstItem="7Wd-hV-9bU" firstAttribute="top" secondItem="Sx5-Xw-zil" secondAttribute="top" id="Ekq-SK-jQC"/>
+                            <constraint firstItem="2cK-Ka-afm" firstAttribute="leading" secondItem="Sx5-Xw-zil" secondAttribute="leading" id="Rnz-FZ-2we"/>
                             <constraint firstItem="Sx5-Xw-zil" firstAttribute="bottom" secondItem="wF7-oe-R40" secondAttribute="bottom" constant="16" id="UIe-dQ-EQG"/>
+                            <constraint firstItem="7Wd-hV-9bU" firstAttribute="leading" secondItem="Sx5-Xw-zil" secondAttribute="leading" id="dRe-BM-8Ec"/>
                             <constraint firstItem="Sx5-Xw-zil" firstAttribute="trailing" secondItem="wF7-oe-R40" secondAttribute="trailing" constant="16" id="eJy-O3-U9p"/>
-                            <constraint firstItem="HLW-RQ-mL7" firstAttribute="top" secondItem="Sx5-Xw-zil" secondAttribute="top" id="fgp-RE-ceR"/>
+                            <constraint firstItem="Sx5-Xw-zil" firstAttribute="trailing" secondItem="7Wd-hV-9bU" secondAttribute="trailing" id="ema-cj-Aq5"/>
+                            <constraint firstItem="2cK-Ka-afm" firstAttribute="top" secondItem="Sx5-Xw-zil" secondAttribute="top" id="tfd-fa-w6e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sx5-Xw-zil"/>
                     </view>
@@ -63,8 +106,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="homeTable" destination="HLW-RQ-mL7" id="vxu-B1-d8t"/>
+                        <outlet property="friendNotificationView" destination="7Wd-hV-9bU" id="75F-Gk-IBm"/>
+                        <outlet property="homeTable" destination="2cK-Ka-afm" id="xeE-im-G2m"/>
                         <outlet property="syncGlucoseButton" destination="wF7-oe-R40" id="dwX-Ap-FJb"/>
+                        <outlet property="view" destination="XSt-2F-swd" id="O6D-Rp-4Cy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAl-xJ-Q3A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -91,6 +136,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="alice" width="51" height="47"/>
         <image name="input" width="104" height="104"/>
+        <image name="x" width="19" height="19"/>
     </resources>
 </document>

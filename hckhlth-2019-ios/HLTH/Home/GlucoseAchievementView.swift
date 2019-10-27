@@ -15,6 +15,8 @@ protocol GlucoseAchievementDelegate {
 
 class GlucoseAchievementView: UIView {
     @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var achievementView: UIView!
+    @IBOutlet weak var overlayView: UIView!
     
     var delegate: GlucoseAchievementDelegate?
     
@@ -25,12 +27,22 @@ class GlucoseAchievementView: UIView {
     }
     
     @IBAction func close(_ sender: UIButton) {
-        delegate?.completeAchievement()
-        removeFromSuperview()
+        close()
     }
     
     @IBAction func ok(_ sender: UIButton) {
+        close()
+    }
+    
+    func close() {
         delegate?.completeAchievement()
-        removeFromSuperview()
+        overlayView.alpha = 1
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
+            self.achievementView.center.y += self.achievementView.frame.height
+            self.overlayView.alpha = 0
+        }) { (completed) in
+            self.overlayView.alpha = 1
+            self.removeFromSuperview()
+        }
     }
 }

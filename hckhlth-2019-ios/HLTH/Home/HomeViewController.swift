@@ -15,6 +15,7 @@ var HAS_ENTERED_GLUCOSE = false
 class HomeViewController: UIViewController {
     @IBOutlet weak var homeTable: UITableView!
     @IBOutlet weak var syncGlucoseButton: UIButton!
+    @IBOutlet weak var friendNotificationView: UIView!
     
     var syncGlucoseView: SyncGlucoseView?
     var glucoseAchievementView: GlucoseAchievementView?
@@ -37,6 +38,27 @@ class HomeViewController: UIViewController {
         
         homeTable.rowHeight = UITableView.automaticDimension
         homeTable.estimatedRowHeight = 600
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        let currentUser = UserManager.getUser()
+        ref.child("achievement").child("liked").observe(.value) { (snapshot) in
+            guard currentUser == USER_1 else { return }
+            if let value = snapshot.value as? Bool, value == true {
+                DispatchQueue.main.async {
+                    self.friendNotificationView.center.y -= self.friendNotificationView.frame.height
+                    self.friendNotificationView.isHidden = false
+                    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
+                        self.friendNotificationView.center.y += self.friendNotificationView.frame.height
+                    }, completion: nil)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.friendNotificationView.isHidden = true
+                }
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,13 +69,24 @@ class HomeViewController: UIViewController {
     
     @IBAction func syncGlucose(_ sender: UIButton) {
         if let syncGlucoseView = syncGlucoseView {
+            syncGlucoseView.logView.center.y += syncGlucoseView.logView.frame.height
             tabBarController?.view.addSubview(syncGlucoseView)
+            
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
+                syncGlucoseView.logView.center.y -= syncGlucoseView.logView.frame.height
+            }, completion: nil)
         } else {
             let syncGlucoseView = SyncGlucoseView.loadFromNibNamed("SyncGlucoseView", bundle: Bundle(for: self.classForCoder)) as! SyncGlucoseView
             syncGlucoseView.frame = UIScreen.main.bounds
             syncGlucoseView.delegate = self
             
+            syncGlucoseView.logView.center.y += syncGlucoseView.logView.frame.height
             tabBarController?.view.addSubview(syncGlucoseView)
+            
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
+                syncGlucoseView.logView.center.y -= syncGlucoseView.logView.frame.height
+            }, completion: nil)
+            
             self.syncGlucoseView = syncGlucoseView
         }
     }
@@ -62,6 +95,10 @@ class HomeViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Settings", bundle: Bundle(for: self.classForCoder))
         let settingsController = storyboard.instantiateViewController(withIdentifier: "SettingsView") as! SettingsViewController
         navigationController?.pushViewController(settingsController, animated: true)
+    }
+    
+    @IBAction func closeNotification(_ sender: UIButton) {
+        friendNotificationView.isHidden = true
     }
     
     func showGlucoseAchievementView() {
