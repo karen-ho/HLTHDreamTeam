@@ -10,5 +10,8 @@ import Foundation
 import UIKit
 
 class HomeHeaderCell: UITableViewCell {
-    
+    @IBOutlet weak var averageLabel: UILabel!
+    @IBOutlet weak var deviationLabel: UILabel!
+    @IBOutlet weak var hypersLabel: UILabel!
+    @IBOutlet weak var hyposLabel: UILabel!
 }

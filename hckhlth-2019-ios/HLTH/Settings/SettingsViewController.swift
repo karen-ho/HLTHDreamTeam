@@ -41,5 +41,7 @@ class SettingsViewController: UIViewController {
         ref = Database.database().reference()
         ref.child("achievement").child("unlocked").removeValue()
         ref.child("achievement").child("liked").removeValue()
+        
+        HAS_ENTERED_GLUCOSE = false
     }
 }

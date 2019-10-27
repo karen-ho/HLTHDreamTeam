@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
+var HAS_ENTERED_GLUCOSE = false
+
 class HomeViewController: UIViewController {
     @IBOutlet weak var homeTable: UITableView!
     @IBOutlet weak var syncGlucoseButton: UIButton!
@@ -35,9 +37,12 @@ class HomeViewController: UIViewController {
         
         homeTable.rowHeight = UITableView.automaticDimension
         homeTable.estimatedRowHeight = 600
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        let insets = UIEdgeInsets(top: 0, left: 0, bottom: 32, right: 0)
-        homeTable.contentInset = insets
+        homeTable.reloadData()
     }
     
     @IBAction func syncGlucose(_ sender: UIButton) {
@@ -102,6 +107,10 @@ extension HomeViewController: UITableViewDataSource {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeHeader") as! HomeHeaderCell
             cell.selectionStyle = .none
+            cell.averageLabel.text = HAS_ENTERED_GLUCOSE ? "154" : "167"
+            cell.deviationLabel.text = HAS_ENTERED_GLUCOSE ? "96" : "83"
+            cell.hypersLabel.text = HAS_ENTERED_GLUCOSE ? "28%" : "33%"
+            cell.hyposLabel.text = HAS_ENTERED_GLUCOSE ? "14%" : "17%"
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeActionHeader") as! HomeActionHeaderCell
@@ -120,15 +129,16 @@ extension HomeViewController: UITableViewDataSource {
 // MARK: - GlucoseDelegate
 extension HomeViewController: GlucoseDelegate {
     func showAchievement() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.showGlucoseAchievementView()
-        }
+        showGlucoseAchievementView()
     }
 }
 
 // MARK: - GlucoseAchievementDelegate
 extension HomeViewController: GlucoseAchievementDelegate {
     func completeAchievement() {
+        HAS_ENTERED_GLUCOSE = true
+        homeTable.reloadData()
+        
         var ref: DatabaseReference!
         ref = Database.database().reference()
         

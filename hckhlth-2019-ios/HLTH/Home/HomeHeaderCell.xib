@@ -158,6 +158,12 @@
                     <constraint firstAttribute="bottom" secondItem="s73-JF-gBv" secondAttribute="bottom" id="xd5-bT-jXn"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="averageLabel" destination="3gX-di-f8o" id="Fml-eT-JC7"/>
+                <outlet property="deviationLabel" destination="ukB-sR-mP9" id="LC2-0S-1IJ"/>
+                <outlet property="hypersLabel" destination="dVY-zL-IuA" id="aI2-Fk-Z9L"/>
+                <outlet property="hyposLabel" destination="TyO-7x-tvL" id="kQb-px-26a"/>
+            </connections>
             <point key="canvasLocation" x="13.043478260869566" y="137.61160714285714"/>
         </tableViewCell>
     </objects>
