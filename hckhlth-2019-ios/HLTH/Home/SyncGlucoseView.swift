@@ -16,6 +16,7 @@ protocol GlucoseDelegate {
 class SyncGlucoseView: UIView {
     @IBOutlet weak var syncButton: UIButton!
     @IBOutlet weak var glucoseLabel: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     var delegate: GlucoseDelegate?
@@ -27,6 +28,9 @@ class SyncGlucoseView: UIView {
         syncButton.isHidden = false
         spinner.isHidden = true
         glucoseLabel.isHidden = true
+        
+        syncButton.layer.cornerRadius = syncButton.frame.height / 2.0
+        saveButton.layer.cornerRadius = saveButton.frame.height / 2.0
     }
     
     @IBAction func sync(_ sender: UIButton) {
@@ -36,7 +40,6 @@ class SyncGlucoseView: UIView {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.spinner.stopAnimating()
             self.glucoseLabel.isHidden = false
-            self.glucoseLabel.text = "828"
         }
     }
     
