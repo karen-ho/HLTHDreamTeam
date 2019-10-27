@@ -54,7 +54,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5x-OK-0ob">
-                                <rect key="frame" x="88" y="0.0" width="83" height="137"/>
+                                <rect key="frame" x="94" y="0.0" width="83" height="137"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deviation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zcb-hh-vcc">
                                         <rect key="frame" x="0.0" y="16" width="73.5" height="20.5"/>
@@ -88,7 +88,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDa-wX-y8g">
-                                <rect key="frame" x="181" y="0.0" width="90" height="137"/>
+                                <rect key="frame" x="191" y="0.0" width="90" height="137"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hypers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnd-79-ykM">
                                         <rect key="frame" x="0.0" y="16" width="56.5" height="20.5"/>
@@ -122,7 +122,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OK9-NM-2cV">
-                                <rect key="frame" x="281" y="0.0" width="85" height="137"/>
+                                <rect key="frame" x="299" y="0.0" width="80" height="137"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hypos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkM-2J-zdx">
                                         <rect key="frame" x="0.0" y="16" width="50.5" height="20.5"/>
@@ -151,22 +151,21 @@
                                     <constraint firstItem="fkM-2J-zdx" firstAttribute="leading" secondItem="OK9-NM-2cV" secondAttribute="leading" id="HsS-fr-XEe"/>
                                     <constraint firstItem="EF8-3h-H2E" firstAttribute="top" secondItem="TyO-7x-tvL" secondAttribute="bottom" id="QIS-OB-eJP"/>
                                     <constraint firstAttribute="bottom" secondItem="EF8-3h-H2E" secondAttribute="bottom" constant="32" id="U6T-gI-Wyt"/>
-                                    <constraint firstAttribute="width" constant="85" id="kGd-Ab-Lf3"/>
+                                    <constraint firstAttribute="width" constant="80" id="kGd-Ab-Lf3"/>
                                     <constraint firstItem="TyO-7x-tvL" firstAttribute="top" secondItem="fkM-2J-zdx" secondAttribute="bottom" id="w7K-aD-bYc"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="sDa-wX-y8g" firstAttribute="leading" secondItem="f5x-OK-0ob" secondAttribute="trailing" constant="10" id="DvR-9A-oIU"/>
-                            <constraint firstItem="f5x-OK-0ob" firstAttribute="leading" secondItem="akF-t4-Hkl" secondAttribute="trailing" constant="8" id="NMd-I1-12u"/>
-                            <constraint firstItem="OK9-NM-2cV" firstAttribute="leading" secondItem="sDa-wX-y8g" secondAttribute="trailing" constant="10" id="R90-WN-F8M"/>
+                            <constraint firstItem="sDa-wX-y8g" firstAttribute="leading" secondItem="f5x-OK-0ob" secondAttribute="trailing" constant="14" id="DvR-9A-oIU"/>
+                            <constraint firstItem="f5x-OK-0ob" firstAttribute="leading" secondItem="akF-t4-Hkl" secondAttribute="trailing" constant="14" id="NMd-I1-12u"/>
+                            <constraint firstItem="OK9-NM-2cV" firstAttribute="leading" secondItem="sDa-wX-y8g" secondAttribute="trailing" constant="18" id="R90-WN-F8M"/>
                             <constraint firstItem="akF-t4-Hkl" firstAttribute="leading" secondItem="Snm-og-3Wh" secondAttribute="leading" id="T9t-yg-ySS"/>
                             <constraint firstAttribute="height" constant="137" id="XIh-jb-r7L"/>
                             <constraint firstItem="sDa-wX-y8g" firstAttribute="top" secondItem="Snm-og-3Wh" secondAttribute="top" id="fAb-l6-aI9"/>
                             <constraint firstItem="OK9-NM-2cV" firstAttribute="top" secondItem="Snm-og-3Wh" secondAttribute="top" id="li5-tc-tfD"/>
                             <constraint firstItem="f5x-OK-0ob" firstAttribute="top" secondItem="Snm-og-3Wh" secondAttribute="top" id="lrA-VZ-PQB"/>
-                            <constraint firstAttribute="trailing" secondItem="OK9-NM-2cV" secondAttribute="trailing" id="sZh-xp-sUU"/>
                             <constraint firstItem="akF-t4-Hkl" firstAttribute="top" secondItem="Snm-og-3Wh" secondAttribute="top" id="tlw-Nx-zmd"/>
                         </constraints>
                     </view>

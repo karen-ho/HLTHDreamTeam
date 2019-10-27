@@ -41,10 +41,12 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiB-gb-A1Y">
-                                <rect key="frame" x="16" y="192" width="382" height="227"/>
+                                <rect key="frame" x="16" y="192" width="382" height="317.5"/>
                                 <string key="text">Hi Dan,
 
-Hope you’ve been well. I’m writing to let you know that you’re due for an annual exam. I’ve added it as an action item for you. Let me know if you have any questions, I hope to see you soon!
+Hope you’ve been well. I’m writing to let you know that your blood sugar level is out of range. We may have to adjust your insulin dosage. 
+
+Please schedule an appointment at your earliest convenience. I’ve added it as an action item for you. Let me know if you have any questions, I hope to see you soon!
 
 Best,
 Dr. Smith</string>
@@ -71,7 +73,7 @@ Dr. Smith</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zc8-Zi-zU1"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Annual Exam Reminder" id="jD9-cZ-0Q5">
+                    <navigationItem key="navigationItem" title="Appointment Request" id="jD9-cZ-0Q5">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="T2z-sG-Rhi">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BZR-u6-MWB">
                                 <rect key="frame" x="20" y="0.0" width="48" height="44"/>

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Schedule Annual Exam-->
+        <!--Schedule Appointment-->
         <scene sceneID="IlO-5T-G2t">
             <objects>
                 <viewController storyboardIdentifier="ScheduleView" id="e6Z-v3-LNX" customClass="ScheduleViewController" customModule="HLTH" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="24" y="112" width="366" height="203"/>
                                 <string key="text">We know you may not feel different, but you are helping control your diabetes by working closely with us on your care. Plus, you may even save on health care costs.
 
-Please schedule an annual exam with Dr. Smith by Nov 30, 2019. 
+Please schedule an appointment with Dr. Smith by Nov 30, 2019. 
 
 We’re so glad you’re making your health a priority.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -47,7 +47,7 @@ We’re so glad you’re making your health a priority.</string>
                                     <constraint firstAttribute="height" constant="56" id="Ufs-7V-nMo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <state key="normal" title="Schedule Exam">
+                                <state key="normal" title="Schedule Appointment">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -66,7 +66,7 @@ We’re so glad you’re making your health a priority.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t10-yB-QjG"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Schedule Annual Exam" id="ECP-dx-tGZ">
+                    <navigationItem key="navigationItem" title="Schedule Appointment" id="ECP-dx-tGZ">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="z1C-KI-Cqu">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mbU-Xt-Y5g">
                                 <rect key="frame" x="20" y="0.0" width="48" height="44"/>
