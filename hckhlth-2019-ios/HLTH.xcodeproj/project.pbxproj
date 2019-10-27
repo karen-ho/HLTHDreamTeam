@@ -128,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				9C86CE5E2364FAE20052EEEE /* AppDelegate.swift */,
-				9C86CEA023655B200052EEEE /* Magic */,
+				9C86CEA023655B200052EEEE /* MyHealth */,
 				9C86CE9B236552DC0052EEEE /* Home */,
 				9C86CE962365524F0052EEEE /* Launch */,
 				9C86CE95236552470052EEEE /* Tab */,
@@ -185,13 +185,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		9C86CEA023655B200052EEEE /* Magic */ = {
+		9C86CEA023655B200052EEEE /* MyHealth */ = {
 			isa = PBXGroup;
 			children = (
 				9C86CE9C23655AD10052EEEE /* MyHealthViewController.swift */,
 				9C86CE9E23655AF80052EEEE /* MyHealth.storyboard */,
 			);
-			path = Magic;
+			path = MyHealth;
 			sourceTree = "<group>";
 		};
 		CFABA62AEBA0DFF8382B9A23 /* Frameworks */ = {
