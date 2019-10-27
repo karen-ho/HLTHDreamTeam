@@ -16,7 +16,9 @@ class LaunchViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+    }
+    
+    @IBAction func goNext(_ sender: UIButton) {
         let tabStoryboard = UIStoryboard(name: "Tab", bundle: Bundle(for: self.classForCoder))
         let tabController = tabStoryboard.instantiateViewController(withIdentifier: "TabView") as! TabViewController
         UIApplication.shared.keyWindow?.rootViewController = tabController
