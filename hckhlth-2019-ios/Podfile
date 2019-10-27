@@ -5,8 +5,17 @@ platform :ios, '12.0'
 use_frameworks!
 
 target 'HLTH' do
-  pod 'Moya'
-  pod 'Kingfisher'
-  pod 'RxSwift'
-  pod 'RxCocoa'
+	pod 'Moya'
+	pod 'Kingfisher'
+	pod 'RxSwift'
+	pod 'RxCocoa'
+	pod 'FirebaseABTesting'
+	pod 'FirebaseAuth'
+	pod 'FirebaseCore'
+	pod 'FirebaseDatabase'
+	pod 'FirebaseFirestore'
+	pod 'FirebaseFunctions'
+	pod 'FirebaseMessaging'
+	pod 'FirebaseRemoteConfig'
+	pod 'FirebaseStorage'
 end
