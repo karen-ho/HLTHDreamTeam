@@ -43,6 +43,7 @@ class SettingsViewController: UIViewController {
         ref.child("achievement").child("liked").removeValue()
         ref.child("doctor").child("notification").removeValue()
         ref.child("doctor").child("read").removeValue()
+        ref.child("start").child("record").removeValue()
         
         HAS_ENTERED_GLUCOSE = false
         HAS_LIKED = false

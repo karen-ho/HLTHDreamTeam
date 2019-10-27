@@ -15,7 +15,23 @@
                     <view key="view" contentMode="scaleToFill" id="6ay-zK-Izv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWX-4L-do5">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FMc-zr-9k8"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="showBeginningNotification:" destination="uNi-AK-P1l" eventType="touchUpInside" id="dCE-kt-gJt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iY0-fU-v8u" firstAttribute="trailing" secondItem="yWX-4L-do5" secondAttribute="trailing" id="Pxa-mn-Z2L"/>
+                            <constraint firstItem="iY0-fU-v8u" firstAttribute="bottom" secondItem="yWX-4L-do5" secondAttribute="bottom" id="lbN-an-OAm"/>
+                            <constraint firstItem="yWX-4L-do5" firstAttribute="leading" secondItem="iY0-fU-v8u" secondAttribute="leading" id="sGU-tC-VMb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iY0-fU-v8u"/>
                     </view>
                 </viewController>

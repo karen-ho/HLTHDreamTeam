@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var homeTable: UITableView!
     @IBOutlet weak var syncGlucoseButton: UIButton!
     @IBOutlet weak var friendNotificationView: UIView!
+    @IBOutlet weak var startNotificationView: UIView!
     
     var syncGlucoseView: SyncGlucoseView?
     var glucoseAchievementView: GlucoseAchievementView?
@@ -60,6 +61,23 @@ class HomeViewController: UIViewController {
             } else {
                 DispatchQueue.main.async {
                     self.friendNotificationView.isHidden = true
+                }
+            }
+        }
+        
+        ref.child("start").child("record").observe(.value) { (snapshot) in
+            guard currentUser == USER_1 else { return }
+            if let value = snapshot.value as? Bool, value == true {
+                DispatchQueue.main.async {
+                    self.startNotificationView.center.y -= self.startNotificationView.frame.height
+                    self.startNotificationView.isHidden = false
+                    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
+                        self.startNotificationView.center.y += self.startNotificationView.frame.height
+                    }, completion: nil)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.startNotificationView.isHidden = true
                 }
             }
         }
@@ -115,6 +133,10 @@ class HomeViewController: UIViewController {
     
     @IBAction func closeNotification(_ sender: UIButton) {
         friendNotificationView.isHidden = true
+    }
+    
+    @IBAction func closeFirstNotification(_ sender: UIButton) {
+        startNotificationView.isHidden = true
     }
     
     func showGlucoseAchievementView() {

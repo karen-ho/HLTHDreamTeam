@@ -36,6 +36,9 @@ We’re so glad you’re making your health a priority.</string>
                                 <state key="normal" title="Remind me later">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="goBack:" destination="e6Z-v3-LNX" eventType="touchUpInside" id="s5r-To-qfC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAI-JA-CAq">
                                 <rect key="frame" x="16" y="726" width="382" height="56"/>

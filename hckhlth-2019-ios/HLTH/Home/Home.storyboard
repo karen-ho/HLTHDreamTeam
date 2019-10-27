@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2cK-Ka-afm">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2cK-Ka-afm">
+                                <rect key="frame" x="0.0" y="281" width="414" height="581"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="JAK-Ac-cmx" id="CCS-oA-7kP"/>
@@ -79,17 +79,60 @@
                                     <constraint firstItem="UQL-jm-ara" firstAttribute="centerY" secondItem="7Wd-hV-9bU" secondAttribute="centerY" id="yXr-Mi-uUK"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qR-j8-yMV">
+                                <rect key="frame" x="0.0" y="88" width="414" height="64"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notification" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aoF-hd-5SD">
+                                        <rect key="frame" x="24" y="8.5" width="51" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="ol0-r0-6Oz"/>
+                                            <constraint firstAttribute="width" constant="51" id="qIf-js-j6o"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwv-ss-OtO">
+                                        <rect key="frame" x="334" y="0.0" width="80" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="UP5-fH-0BE"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="24" maxY="0.0"/>
+                                        <state key="normal" image="x"/>
+                                        <connections>
+                                            <action selector="closeFirstNotification:" destination="JAK-Ac-cmx" eventType="touchUpInside" id="x4x-rc-jfS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time to record your blood glucose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDD-wQ-Ehz">
+                                        <rect key="frame" x="83" y="21.5" width="268.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.96470588239999999" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="WDD-wQ-Ehz" firstAttribute="leading" secondItem="aoF-hd-5SD" secondAttribute="trailing" constant="8" id="5am-eT-Ok9"/>
+                                    <constraint firstItem="WDD-wQ-Ehz" firstAttribute="centerY" secondItem="6qR-j8-yMV" secondAttribute="centerY" id="6Wt-fS-Dw6"/>
+                                    <constraint firstItem="aoF-hd-5SD" firstAttribute="leading" secondItem="6qR-j8-yMV" secondAttribute="leading" constant="24" id="8DQ-Ml-wjm"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mwv-ss-OtO" secondAttribute="bottom" id="LPd-A5-Qdc"/>
+                                    <constraint firstItem="aoF-hd-5SD" firstAttribute="centerY" secondItem="6qR-j8-yMV" secondAttribute="centerY" id="Tge-8j-tw3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mwv-ss-OtO" secondAttribute="trailing" id="l6g-NT-7Y6"/>
+                                    <constraint firstAttribute="height" constant="64" id="p4q-qb-UYU"/>
+                                    <constraint firstItem="Mwv-ss-OtO" firstAttribute="top" secondItem="6qR-j8-yMV" secondAttribute="top" id="u1f-dk-iJw"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Sx5-Xw-zil" firstAttribute="trailing" secondItem="2cK-Ka-afm" secondAttribute="trailing" id="1Lj-Ad-V9e"/>
+                            <constraint firstItem="6qR-j8-yMV" firstAttribute="leading" secondItem="Sx5-Xw-zil" secondAttribute="leading" id="AkT-wr-Zgc"/>
                             <constraint firstItem="2cK-Ka-afm" firstAttribute="bottom" secondItem="Sx5-Xw-zil" secondAttribute="bottom" id="CR9-Oi-dG7"/>
                             <constraint firstItem="7Wd-hV-9bU" firstAttribute="top" secondItem="Sx5-Xw-zil" secondAttribute="top" id="Ekq-SK-jQC"/>
+                            <constraint firstItem="6qR-j8-yMV" firstAttribute="trailing" secondItem="Sx5-Xw-zil" secondAttribute="trailing" id="IYi-eK-SGx"/>
                             <constraint firstItem="2cK-Ka-afm" firstAttribute="leading" secondItem="Sx5-Xw-zil" secondAttribute="leading" id="Rnz-FZ-2we"/>
                             <constraint firstItem="Sx5-Xw-zil" firstAttribute="bottom" secondItem="wF7-oe-R40" secondAttribute="bottom" constant="16" id="UIe-dQ-EQG"/>
                             <constraint firstItem="7Wd-hV-9bU" firstAttribute="leading" secondItem="Sx5-Xw-zil" secondAttribute="leading" id="dRe-BM-8Ec"/>
                             <constraint firstItem="Sx5-Xw-zil" firstAttribute="trailing" secondItem="wF7-oe-R40" secondAttribute="trailing" constant="16" id="eJy-O3-U9p"/>
                             <constraint firstItem="Sx5-Xw-zil" firstAttribute="trailing" secondItem="7Wd-hV-9bU" secondAttribute="trailing" id="ema-cj-Aq5"/>
+                            <constraint firstItem="6qR-j8-yMV" firstAttribute="top" secondItem="Sx5-Xw-zil" secondAttribute="top" id="t9m-DJ-xbw"/>
                             <constraint firstItem="2cK-Ka-afm" firstAttribute="top" secondItem="Sx5-Xw-zil" secondAttribute="top" id="tfd-fa-w6e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sx5-Xw-zil"/>
@@ -108,6 +151,7 @@
                     <connections>
                         <outlet property="friendNotificationView" destination="7Wd-hV-9bU" id="75F-Gk-IBm"/>
                         <outlet property="homeTable" destination="2cK-Ka-afm" id="xeE-im-G2m"/>
+                        <outlet property="startNotificationView" destination="6qR-j8-yMV" id="sOd-tQ-NbR"/>
                         <outlet property="syncGlucoseButton" destination="wF7-oe-R40" id="dwX-Ap-FJb"/>
                         <outlet property="view" destination="XSt-2F-swd" id="O6D-Rp-4Cy"/>
                     </connections>
@@ -138,6 +182,7 @@
     <resources>
         <image name="alice" width="51" height="47"/>
         <image name="input" width="104" height="104"/>
+        <image name="notification" width="42" height="42"/>
         <image name="x" width="19" height="19"/>
     </resources>
 </document>
