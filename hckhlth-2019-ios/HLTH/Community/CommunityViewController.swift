@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 class CommunityViewController: UIViewController {
     @IBOutlet weak var communityTable: UITableView!
@@ -16,12 +17,43 @@ class CommunityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let bundle = Bundle(for: self.classForCoder)
+        let communityNib = UINib(nibName: "CommunityCell", bundle: bundle)
+        communityTable.register(communityNib, forCellReuseIdentifier: "community")
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        let currentUser = UserManager.getUser()
+        
+        ref.child("achievement").child("unlocked").observe(.value) { (snapshot) in
+            guard currentUser == USER_2 else { return }
+            if let value = snapshot.value as? Bool, value == true {
+                DispatchQueue.main.async {
+                    self.communityEvents.append("YAY")
+                    self.communityTable.insertRows(at: [IndexPath(row: 0, section: 0)], with: .top)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.communityEvents.removeAll()
+                    self.communityTable.deleteRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+                }
+            }
+        }
     }
 }
 
 // MARK: - UITableViewDelegate
 extension CommunityViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        let currentUser = UserManager.getUser()
+        
+        if indexPath.section == 0 && indexPath.row == 0 && currentUser == USER_2 {
+            ref.child("achievement").child("liked").setValue(true)
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -31,7 +63,9 @@ extension CommunityViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "community") as! CommunityCell
+        cell.selectionStyle = .none
+        return cell
     }
     
 }

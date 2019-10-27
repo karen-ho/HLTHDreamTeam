@@ -43,6 +43,8 @@
 		9C86CF08236593A70052EEEE /* HomeEmptyActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CF07236593A60052EEEE /* HomeEmptyActionCell.xib */; };
 		9C86CF0A2365952F0052EEEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CF092365952F0052EEEE /* GoogleService-Info.plist */; };
 		9C86CF0C236596B90052EEEE /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CF0B236596B90052EEEE /* UserManager.swift */; };
+		9C86CF0E2365A2070052EEEE /* CommunityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CF0D2365A2070052EEEE /* CommunityCell.swift */; };
+		9C86CF102365A22E0052EEEE /* CommunityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CF0F2365A22E0052EEEE /* CommunityCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,8 @@
 		9C86CF07236593A60052EEEE /* HomeEmptyActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeEmptyActionCell.xib; sourceTree = "<group>"; };
 		9C86CF092365952F0052EEEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C86CF0B236596B90052EEEE /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		9C86CF0D2365A2070052EEEE /* CommunityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCell.swift; sourceTree = "<group>"; };
+		9C86CF0F2365A22E0052EEEE /* CommunityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityCell.xib; sourceTree = "<group>"; };
 		D6210942DD03506327F6BEDB /* Pods-HLTH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLTH.release.xcconfig"; path = "Target Support Files/Pods-HLTH/Pods-HLTH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -268,6 +272,8 @@
 			children = (
 				9C86CEE823656A5C0052EEEE /* Community.storyboard */,
 				9C86CEE623656A0D0052EEEE /* CommunityViewController.swift */,
+				9C86CF0D2365A2070052EEEE /* CommunityCell.swift */,
+				9C86CF0F2365A22E0052EEEE /* CommunityCell.xib */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 				9C86CEE923656A5C0052EEEE /* Community.storyboard in Resources */,
 				9C86CE942365513F0052EEEE /* Tab.storyboard in Resources */,
 				9C86CEF523657E6F0052EEEE /* Settings.storyboard in Resources */,
+				9C86CF102365A22E0052EEEE /* CommunityCell.xib in Resources */,
 				9C86CE98236552950052EEEE /* Home.storyboard in Resources */,
 				9C86CE9F23655AF80052EEEE /* MyHealth.storyboard in Resources */,
 				9C86CF08236593A70052EEEE /* HomeEmptyActionCell.xib in Resources */,
@@ -488,6 +495,7 @@
 				9C86CEF12365795F0052EEEE /* GlucoseAchievementView.swift in Sources */,
 				9C86CF02236592F60052EEEE /* HomeActionHeaderCell.swift in Sources */,
 				9C86CF062365938A0052EEEE /* HomeEmptyActionCell.swift in Sources */,
+				9C86CF0E2365A2070052EEEE /* CommunityCell.swift in Sources */,
 				9C86CE922365502A0052EEEE /* TabViewController.swift in Sources */,
 				9C86CEFA236591210052EEEE /* HomeHeaderCell.swift in Sources */,
 				9C86CEEF2365737E0052EEEE /* UIView+Extension.swift in Sources */,

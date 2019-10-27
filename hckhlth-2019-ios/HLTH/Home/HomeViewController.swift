@@ -96,11 +96,11 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "homeHeader") as! HomeHeaderCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "homeGraph") as! HomeGraphCell
             cell.selectionStyle = .none
             return cell
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "homeGraph") as! HomeGraphCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "homeHeader") as! HomeHeaderCell
             cell.selectionStyle = .none
             return cell
         case 2:

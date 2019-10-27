@@ -25,13 +25,13 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wF7-oe-R40">
-                                <rect key="frame" x="334" y="782" width="80" height="80"/>
+                                <rect key="frame" x="290" y="738" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="Id1-dj-tiS"/>
-                                    <constraint firstAttribute="height" constant="80" id="erN-tq-TtW"/>
+                                    <constraint firstAttribute="width" constant="100" id="Id1-dj-tiS"/>
+                                    <constraint firstAttribute="height" constant="100" id="erN-tq-TtW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="CLICK">
+                                <state key="normal" image="input">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
@@ -45,8 +45,8 @@
                             <constraint firstItem="HLW-RQ-mL7" firstAttribute="leading" secondItem="Sx5-Xw-zil" secondAttribute="leading" id="H2o-1W-Pno"/>
                             <constraint firstItem="Sx5-Xw-zil" firstAttribute="trailing" secondItem="HLW-RQ-mL7" secondAttribute="trailing" id="Lot-Qn-x1W"/>
                             <constraint firstItem="Sx5-Xw-zil" firstAttribute="bottom" secondItem="HLW-RQ-mL7" secondAttribute="bottom" id="Nwa-6q-Fsr"/>
-                            <constraint firstItem="Sx5-Xw-zil" firstAttribute="bottom" secondItem="wF7-oe-R40" secondAttribute="bottom" id="UIe-dQ-EQG"/>
-                            <constraint firstItem="Sx5-Xw-zil" firstAttribute="trailing" secondItem="wF7-oe-R40" secondAttribute="trailing" id="eJy-O3-U9p"/>
+                            <constraint firstItem="Sx5-Xw-zil" firstAttribute="bottom" secondItem="wF7-oe-R40" secondAttribute="bottom" constant="24" id="UIe-dQ-EQG"/>
+                            <constraint firstItem="Sx5-Xw-zil" firstAttribute="trailing" secondItem="wF7-oe-R40" secondAttribute="trailing" constant="24" id="eJy-O3-U9p"/>
                             <constraint firstItem="HLW-RQ-mL7" firstAttribute="top" secondItem="Sx5-Xw-zil" secondAttribute="top" id="fgp-RE-ceR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sx5-Xw-zil"/>
@@ -90,4 +90,7 @@
             <point key="canvasLocation" x="360.86956521739131" y="-176.11607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="input" width="104" height="104"/>
+    </resources>
 </document>

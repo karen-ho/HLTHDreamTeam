@@ -39,8 +39,7 @@ class SettingsViewController: UIViewController {
     @IBAction func resetAchievements(_ sender: UIButton) {
         var ref: DatabaseReference!
         ref = Database.database().reference()
-        ref.child("achievement").child("unlocked").removeValue { (error, reference) in
-            reference.removeAllObservers()
-        }
+        ref.child("achievement").child("unlocked").removeValue()
+        ref.child("achievement").child("liked").removeValue()
     }
 }
