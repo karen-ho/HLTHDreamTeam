@@ -20,8 +20,8 @@
 		9C86CE942365513F0052EEEE /* Tab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CE932365513F0052EEEE /* Tab.storyboard */; };
 		9C86CE98236552950052EEEE /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CE97236552950052EEEE /* Home.storyboard */; };
 		9C86CE9A236552BE0052EEEE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CE99236552BE0052EEEE /* HomeViewController.swift */; };
-		9C86CE9D23655AD10052EEEE /* MagicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CE9C23655AD10052EEEE /* MagicViewController.swift */; };
-		9C86CE9F23655AF80052EEEE /* Magic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CE9E23655AF80052EEEE /* Magic.storyboard */; };
+		9C86CE9D23655AD10052EEEE /* MyHealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CE9C23655AD10052EEEE /* MyHealthViewController.swift */; };
+		9C86CE9F23655AF80052EEEE /* MyHealth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CE9E23655AF80052EEEE /* MyHealth.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +62,8 @@
 		9C86CE932365513F0052EEEE /* Tab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tab.storyboard; sourceTree = "<group>"; };
 		9C86CE97236552950052EEEE /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		9C86CE99236552BE0052EEEE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		9C86CE9C23655AD10052EEEE /* MagicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicViewController.swift; sourceTree = "<group>"; };
-		9C86CE9E23655AF80052EEEE /* Magic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Magic.storyboard; sourceTree = "<group>"; };
+		9C86CE9C23655AD10052EEEE /* MyHealthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHealthViewController.swift; sourceTree = "<group>"; };
+		9C86CE9E23655AF80052EEEE /* MyHealth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyHealth.storyboard; sourceTree = "<group>"; };
 		D6210942DD03506327F6BEDB /* Pods-HLTH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLTH.release.xcconfig"; path = "Target Support Files/Pods-HLTH/Pods-HLTH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,8 +188,8 @@
 		9C86CEA023655B200052EEEE /* Magic */ = {
 			isa = PBXGroup;
 			children = (
-				9C86CE9C23655AD10052EEEE /* MagicViewController.swift */,
-				9C86CE9E23655AF80052EEEE /* Magic.storyboard */,
+				9C86CE9C23655AD10052EEEE /* MyHealthViewController.swift */,
+				9C86CE9E23655AF80052EEEE /* MyHealth.storyboard */,
 			);
 			path = Magic;
 			sourceTree = "<group>";
@@ -310,7 +310,7 @@
 			files = (
 				9C86CE942365513F0052EEEE /* Tab.storyboard in Resources */,
 				9C86CE98236552950052EEEE /* Home.storyboard in Resources */,
-				9C86CE9F23655AF80052EEEE /* Magic.storyboard in Resources */,
+				9C86CE9F23655AF80052EEEE /* MyHealth.storyboard in Resources */,
 				9C86CE6E2364FAE60052EEEE /* LaunchScreen.storyboard in Resources */,
 				9C86CE6B2364FAE60052EEEE /* Assets.xcassets in Resources */,
 				9C86CE662364FAE20052EEEE /* Main.storyboard in Resources */,
@@ -382,7 +382,7 @@
 			files = (
 				9C86CE632364FAE20052EEEE /* LaunchViewController.swift in Sources */,
 				9C86CE692364FAE20052EEEE /* HLTH.xcdatamodeld in Sources */,
-				9C86CE9D23655AD10052EEEE /* MagicViewController.swift in Sources */,
+				9C86CE9D23655AD10052EEEE /* MyHealthViewController.swift in Sources */,
 				9C86CE5F2364FAE20052EEEE /* AppDelegate.swift in Sources */,
 				9C86CE922365502A0052EEEE /* TabViewController.swift in Sources */,
 				9C86CE9A236552BE0052EEEE /* HomeViewController.swift in Sources */,
