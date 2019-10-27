@@ -18,6 +18,25 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let bundle = Bundle(for: self.classForCoder)
+        let homeHeaderNib = UINib(nibName: "HomeHeaderCell", bundle: bundle)
+        homeTable.register(homeHeaderNib, forCellReuseIdentifier: "homeHeader")
+        
+        let homeGraphNib = UINib(nibName: "HomeGraphCell", bundle: bundle)
+        homeTable.register(homeGraphNib, forCellReuseIdentifier: "homeGraph")
+        
+        let homeActionHeaderNib = UINib(nibName: "HomeActionHeaderCell", bundle: bundle)
+        homeTable.register(homeActionHeaderNib, forCellReuseIdentifier: "homeActionHeader")
+        
+        let homeEmptyActionNib = UINib(nibName: "HomeEmptyActionCell", bundle: bundle)
+        homeTable.register(homeEmptyActionNib, forCellReuseIdentifier: "homeEmptyAction")
+        
+        homeTable.rowHeight = UITableView.automaticDimension
+        homeTable.estimatedRowHeight = 600
+        
+        let insets = UIEdgeInsets(top: 0, left: 0, bottom: 32, right: 0)
+        homeTable.contentInset = insets
     }
     
     @IBAction func syncGlucose(_ sender: UIButton) {
@@ -31,6 +50,12 @@ class HomeViewController: UIViewController {
             tabBarController?.view.addSubview(syncGlucoseView)
             self.syncGlucoseView = syncGlucoseView
         }
+    }
+    
+    @IBAction func goToSettings(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Settings", bundle: Bundle(for: self.classForCoder))
+        let settingsController = storyboard.instantiateViewController(withIdentifier: "SettingsView") as! SettingsViewController
+        navigationController?.pushViewController(settingsController, animated: true)
     }
     
     func showGlucoseAchievementView() {
@@ -54,7 +79,7 @@ extension HomeViewController: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,7 +92,26 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        switch indexPath.section {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "homeHeader") as! HomeHeaderCell
+            cell.selectionStyle = .none
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "homeGraph") as! HomeGraphCell
+            cell.selectionStyle = .none
+            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "homeActionHeader") as! HomeActionHeaderCell
+            cell.selectionStyle = .none
+            return cell
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "homeEmptyAction") as! HomeEmptyActionCell
+            cell.selectionStyle = .none
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
 }
 

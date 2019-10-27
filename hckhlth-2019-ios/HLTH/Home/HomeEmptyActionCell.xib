@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeEmptyAction" rowHeight="182" id="p0h-YJ-y0d" customClass="HomeEmptyActionCell" customModule="HLTH" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="182"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p0h-YJ-y0d" id="dnd-5m-eL3">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="182"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are on top of everything. Good job!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6C-mh-vga">
+                        <rect key="frame" x="32" y="16" width="350" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="W6C-mh-vga" secondAttribute="trailing" constant="32" id="Au9-SJ-YPG"/>
+                    <constraint firstItem="W6C-mh-vga" firstAttribute="top" secondItem="dnd-5m-eL3" secondAttribute="top" constant="16" id="B38-zi-QVr"/>
+                    <constraint firstItem="W6C-mh-vga" firstAttribute="leading" secondItem="dnd-5m-eL3" secondAttribute="leading" constant="32" id="Tv4-va-e1u"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="92.753623188405811" y="146.65178571428569"/>
+        </tableViewCell>
+    </objects>
+</document>
