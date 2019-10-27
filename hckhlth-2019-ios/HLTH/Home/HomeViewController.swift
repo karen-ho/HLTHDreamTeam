@@ -95,7 +95,14 @@ class HomeViewController: UIViewController {
         }
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        self.friendNotificationView.isHidden = true
+    }
+    
     @IBAction func syncGlucose(_ sender: UIButton) {
+        self.startNotificationView.isHidden = true
         if let syncGlucoseView = syncGlucoseView {
             syncGlucoseView.logView.center.y += syncGlucoseView.logView.frame.height
             syncGlucoseView.overlayView.backgroundColor = UIColor.clear

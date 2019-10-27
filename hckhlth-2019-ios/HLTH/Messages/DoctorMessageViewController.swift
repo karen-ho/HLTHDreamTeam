@@ -20,6 +20,10 @@ class DoctorMessageViewController: UIViewController {
         ref.child("doctor").child("read").setValue(true)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func goBack(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
