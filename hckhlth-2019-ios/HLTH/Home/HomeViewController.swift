@@ -103,6 +103,7 @@ extension HomeViewController: UITableViewDataSource {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeGraph") as! HomeGraphCell
             cell.selectionStyle = .none
+            cell.graphImage.image = HAS_ENTERED_GLUCOSE ? UIImage(named: "graph2") : UIImage(named: "graph1")
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeHeader") as! HomeHeaderCell

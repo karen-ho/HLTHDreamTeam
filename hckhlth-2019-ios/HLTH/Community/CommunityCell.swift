@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 class CommunityCell: UITableViewCell {
-    
+    @IBOutlet weak var likeImage: UIImageView!
 }

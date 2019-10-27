@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 class HomeGraphCell: UITableViewCell {
-    
+    @IBOutlet weak var graphImage: UIImageView!
 }

@@ -43,5 +43,6 @@ class SettingsViewController: UIViewController {
         ref.child("achievement").child("liked").removeValue()
         
         HAS_ENTERED_GLUCOSE = false
+        HAS_LIKED = false
     }
 }

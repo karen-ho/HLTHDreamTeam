@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
+let TEAL = UIColor(red: 0.00, green: 0.59, blue: 0.81, alpha:1.0)
+
 class TabViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +47,7 @@ class TabViewController: UITabBarController {
             if let value = snapshot.value as? Bool, value == true {
                 DispatchQueue.main.async {
                     if let communityTab = self.tabBar.items?[3] {
-                        communityTab.badgeColor = UIColor.red
+                        communityTab.badgeColor = TEAL
                         communityTab.badgeValue = "1"
                     }
                 }
@@ -61,7 +63,7 @@ class TabViewController: UITabBarController {
             if let value = snapshot.value as? Bool, value == true {
                 DispatchQueue.main.async {
                     if let communityTab = self.tabBar.items?[3] {
-                        communityTab.badgeColor = UIColor.red
+                        communityTab.badgeColor = TEAL
                         communityTab.badgeValue = "1"
                     }
                 }

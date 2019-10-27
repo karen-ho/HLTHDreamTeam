@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
+var HAS_LIKED = false
+
 class CommunityViewController: UIViewController {
     @IBOutlet weak var communityTable: UITableView!
     
@@ -36,7 +38,7 @@ class CommunityViewController: UIViewController {
             } else {
                 DispatchQueue.main.async {
                     self.communityEvents.removeAll()
-                    self.communityTable.deleteRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+                    self.communityTable.reloadData()
                 }
             }
         }
@@ -52,6 +54,8 @@ extension CommunityViewController: UITableViewDelegate {
         
         if indexPath.section == 0 && indexPath.row == 0 && currentUser == USER_2 {
             ref.child("achievement").child("liked").setValue(true)
+            HAS_LIKED = true
+            communityTable.reloadData()
         }
     }
 }
@@ -65,6 +69,7 @@ extension CommunityViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "community") as! CommunityCell
         cell.selectionStyle = .none
+        cell.likeImage.image = HAS_LIKED ? UIImage(named: "liked") : UIImage(named: "like")
         return cell
     }
     

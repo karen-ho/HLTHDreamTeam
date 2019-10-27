@@ -109,6 +109,9 @@
                 <constraint firstItem="PwG-Pm-rsh" firstAttribute="trailing" secondItem="ekp-xe-YRj" secondAttribute="trailing" id="TEe-z5-wgb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="PwG-Pm-rsh"/>
+            <connections>
+                <outlet property="shareButton" destination="u7x-Rs-W7P" id="nJQ-5s-Q1I"/>
+            </connections>
             <point key="canvasLocation" x="179.71014492753625" y="-66.294642857142861"/>
         </view>
     </objects>

@@ -14,10 +14,14 @@ protocol GlucoseAchievementDelegate {
 }
 
 class GlucoseAchievementView: UIView {
+    @IBOutlet weak var shareButton: UIButton!
+    
     var delegate: GlucoseAchievementDelegate?
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        shareButton.layer.cornerRadius = shareButton.frame.height / 2.0
     }
     
     @IBAction func close(_ sender: UIButton) {
