@@ -15,9 +15,28 @@
                     <view key="view" contentMode="scaleToFill" id="5Ou-Lv-0G7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gEd-0f-Xj5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6y9-FJ-hUh" id="kda-1D-mmJ"/>
+                                    <outlet property="delegate" destination="6y9-FJ-hUh" id="ea9-Gb-D9q"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="X2p-lA-3zl" firstAttribute="bottom" secondItem="gEd-0f-Xj5" secondAttribute="bottom" id="aAw-B2-jHt"/>
+                            <constraint firstItem="gEd-0f-Xj5" firstAttribute="leading" secondItem="X2p-lA-3zl" secondAttribute="leading" id="b9c-2F-XRo"/>
+                            <constraint firstItem="gEd-0f-Xj5" firstAttribute="trailing" secondItem="X2p-lA-3zl" secondAttribute="trailing" id="bUN-qK-5jg"/>
+                            <constraint firstItem="gEd-0f-Xj5" firstAttribute="top" secondItem="X2p-lA-3zl" secondAttribute="top" id="qJL-HM-rCS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="X2p-lA-3zl"/>
                     </view>
+                    <connections>
+                        <outlet property="communityTable" destination="gEd-0f-Xj5" id="EBi-bT-wJn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSU-K0-5Vk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

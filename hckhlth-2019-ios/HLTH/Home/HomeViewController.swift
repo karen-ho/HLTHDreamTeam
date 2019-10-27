@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var homeTable: UITableView!
@@ -64,6 +65,7 @@ class HomeViewController: UIViewController {
         } else {
             let glucoseAchievementView = GlucoseAchievementView.loadFromNibNamed("GlucoseAchievementView", bundle: Bundle(for: self.classForCoder)) as! GlucoseAchievementView
             glucoseAchievementView.frame = UIScreen.main.bounds
+            glucoseAchievementView.delegate = self
             
             tabBarController?.view.addSubview(glucoseAchievementView)
             self.glucoseAchievementView = glucoseAchievementView
@@ -121,5 +123,18 @@ extension HomeViewController: GlucoseDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.showGlucoseAchievementView()
         }
+    }
+}
+
+// MARK: - GlucoseAchievementDelegate
+extension HomeViewController: GlucoseAchievementDelegate {
+    func completeAchievement() {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        let currentUser = UserManager.getUser()
+        guard currentUser == USER_1 else { return }
+        
+        ref.child("achievement").child("unlocked").setValue(true)
     }
 }

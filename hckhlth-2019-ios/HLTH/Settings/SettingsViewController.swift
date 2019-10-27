@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 let USER_1: String = "USER 1"
 let USER_2: String = "USER 2"
@@ -31,7 +32,15 @@ class SettingsViewController: UIViewController {
         if let currentUser = UserDefaults.standard.string(forKey: CURRENT_USER) {
             let newUser = currentUser == USER_1 ? USER_2 : USER_1
             UserDefaults.standard.set(newUser, forKey: CURRENT_USER)
-            currentUserLabel.text = "\(newUser)"
+            currentUserLabel.text = "\(UserManager.getUser())"
+        }
+    }
+    
+    @IBAction func resetAchievements(_ sender: UIButton) {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        ref.child("achievement").child("unlocked").removeValue { (error, reference) in
+            reference.removeAllObservers()
         }
     }
 }

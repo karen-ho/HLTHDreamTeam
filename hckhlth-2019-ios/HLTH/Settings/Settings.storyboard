@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Hni-5D-VkW">
-                                <rect key="frame" x="16" y="88" width="382" height="90"/>
+                                <rect key="frame" x="16" y="88" width="382" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ned-6p-43J">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -36,6 +36,13 @@
                                         <state key="normal" title="Switch User"/>
                                         <connections>
                                             <action selector="switchUser:" destination="rLQ-io-EAV" eventType="touchUpInside" id="9YD-TA-eLe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bK-hD-agt">
+                                        <rect key="frame" x="0.0" y="90" width="382" height="30"/>
+                                        <state key="normal" title="Remove Achievements"/>
+                                        <connections>
+                                            <action selector="resetAchievements:" destination="rLQ-io-EAV" eventType="touchUpInside" id="HiJ-hG-Lfl"/>
                                         </connections>
                                     </button>
                                 </subviews>

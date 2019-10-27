@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 class TabViewController: UITabBarController {
     override func viewDidLoad() {
@@ -34,5 +35,43 @@ class TabViewController: UITabBarController {
         communityNavController.tabBarItem = UITabBarItem(title: "Community", image: UIImage(named: "star"), selectedImage: UIImage(named: "star"))
         
         viewControllers = [homeNavController, myHealthNavController, messagesNavController, communityNavController]
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        let currentUser = UserManager.getUser()
+        ref.child("achievement").child("liked").observe(.value) { (snapshot) in
+            guard currentUser == USER_1 else { return }
+            if let value = snapshot.value as? Bool, value == true {
+                DispatchQueue.main.async {
+                    if let communityTab = self.tabBar.items?[3] {
+                        communityTab.badgeColor = UIColor.red
+                        communityTab.badgeValue = "1"
+                    }
+                }
+            } else {
+                if let communityTab = self.tabBar.items?[3] {
+                    communityTab.badgeValue = nil
+                }
+            }
+        }
+        
+        ref.child("achievement").child("unlocked").observe(.value) { (snapshot) in
+            guard currentUser == USER_2 else { return }
+            if let value = snapshot.value as? Bool, value == true {
+                DispatchQueue.main.async {
+                    if let communityTab = self.tabBar.items?[3] {
+                        communityTab.badgeColor = UIColor.red
+                        communityTab.badgeValue = "1"
+                    }
+                }
+            } else {
+                DispatchQueue.main.async {
+                    if let communityTab = self.tabBar.items?[3] {
+                        communityTab.badgeValue = nil
+                    }
+                }
+            }
+        }
     }
 }

@@ -42,6 +42,7 @@
 		9C86CF062365938A0052EEEE /* HomeEmptyActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CF052365938A0052EEEE /* HomeEmptyActionCell.swift */; };
 		9C86CF08236593A70052EEEE /* HomeEmptyActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CF07236593A60052EEEE /* HomeEmptyActionCell.xib */; };
 		9C86CF0A2365952F0052EEEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CF092365952F0052EEEE /* GoogleService-Info.plist */; };
+		9C86CF0C236596B90052EEEE /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CF0B236596B90052EEEE /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		9C86CF052365938A0052EEEE /* HomeEmptyActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmptyActionCell.swift; sourceTree = "<group>"; };
 		9C86CF07236593A60052EEEE /* HomeEmptyActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeEmptyActionCell.xib; sourceTree = "<group>"; };
 		9C86CF092365952F0052EEEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9C86CF0B236596B90052EEEE /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		D6210942DD03506327F6BEDB /* Pods-HLTH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLTH.release.xcconfig"; path = "Target Support Files/Pods-HLTH/Pods-HLTH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,10 +169,10 @@
 		9C86CE5D2364FAE20052EEEE /* HLTH */ = {
 			isa = PBXGroup;
 			children = (
-				9C86CF092365952F0052EEEE /* GoogleService-Info.plist */,
 				9C86CE5E2364FAE20052EEEE /* AppDelegate.swift */,
 				9C86CE6A2364FAE60052EEEE /* Assets.xcassets */,
 				9C86CEE5236569FC0052EEEE /* Community */,
+				9C86CF092365952F0052EEEE /* GoogleService-Info.plist */,
 				9C86CE672364FAE20052EEEE /* HLTH.xcdatamodeld */,
 				9C86CE9B236552DC0052EEEE /* Home */,
 				9C86CE6F2364FAE60052EEEE /* Info.plist */,
@@ -181,6 +183,7 @@
 				9C86CEF823657E9E0052EEEE /* Settings */,
 				9C86CE95236552470052EEEE /* Tab */,
 				9C86CEEE2365737E0052EEEE /* UIView+Extension.swift */,
+				9C86CF0B236596B90052EEEE /* UserManager.swift */,
 			);
 			path = HLTH;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				9C86CEEF2365737E0052EEEE /* UIView+Extension.swift in Sources */,
 				9C86CE9A236552BE0052EEEE /* HomeViewController.swift in Sources */,
 				9C86CEF723657E800052EEEE /* SettingsViewController.swift in Sources */,
+				9C86CF0C236596B90052EEEE /* UserManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
