@@ -23,6 +23,16 @@ class TabViewController: UITabBarController {
         let myHealthNavController = UINavigationController(rootViewController: myHealthController)
         myHealthNavController.tabBarItem = UITabBarItem(title: "MyHealth", image: UIImage(named: "star"), selectedImage: UIImage(named: "star"))
         
-        viewControllers = [homeNavController, myHealthNavController]
+        let messagesStoryboard = UIStoryboard(name: "Messages", bundle: Bundle(for: self.classForCoder))
+        let messagesController = messagesStoryboard.instantiateViewController(withIdentifier: "MessagesView") as! MessagesViewController
+        let messagesNavController = UINavigationController(rootViewController: messagesController)
+        messagesNavController.tabBarItem = UITabBarItem(title: "Messages", image: UIImage(named: "star"), selectedImage: UIImage(named: "star"))
+        
+        let communityStoryboard = UIStoryboard(name: "Community", bundle: Bundle(for: self.classForCoder))
+        let communityController = communityStoryboard.instantiateViewController(withIdentifier: "CommunityView") as! CommunityViewController
+        let communityNavController = UINavigationController(rootViewController: communityController)
+        communityNavController.tabBarItem = UITabBarItem(title: "Community", image: UIImage(named: "star"), selectedImage: UIImage(named: "star"))
+        
+        viewControllers = [homeNavController, myHealthNavController, messagesNavController, communityNavController]
     }
 }

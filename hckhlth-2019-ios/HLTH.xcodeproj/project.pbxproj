@@ -22,6 +22,17 @@
 		9C86CE9A236552BE0052EEEE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CE99236552BE0052EEEE /* HomeViewController.swift */; };
 		9C86CE9D23655AD10052EEEE /* MyHealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CE9C23655AD10052EEEE /* MyHealthViewController.swift */; };
 		9C86CE9F23655AF80052EEEE /* MyHealth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CE9E23655AF80052EEEE /* MyHealth.storyboard */; };
+		9C86CEE2236569620052EEEE /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CEE1236569620052EEEE /* Messages.storyboard */; };
+		9C86CEE42365696F0052EEEE /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CEE32365696F0052EEEE /* MessagesViewController.swift */; };
+		9C86CEE723656A0D0052EEEE /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CEE623656A0D0052EEEE /* CommunityViewController.swift */; };
+		9C86CEE923656A5C0052EEEE /* Community.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CEE823656A5C0052EEEE /* Community.storyboard */; };
+		9C86CEEB2365701F0052EEEE /* SyncGlucoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CEEA2365701F0052EEEE /* SyncGlucoseView.swift */; };
+		9C86CEED2365704A0052EEEE /* SyncGlucoseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CEEC2365704A0052EEEE /* SyncGlucoseView.xib */; };
+		9C86CEEF2365737E0052EEEE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CEEE2365737E0052EEEE /* UIView+Extension.swift */; };
+		9C86CEF12365795F0052EEEE /* GlucoseAchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CEF02365795F0052EEEE /* GlucoseAchievementView.swift */; };
+		9C86CEF32365798B0052EEEE /* GlucoseAchievementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CEF22365798B0052EEEE /* GlucoseAchievementView.xib */; };
+		9C86CEF523657E6F0052EEEE /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C86CEF423657E6E0052EEEE /* Settings.storyboard */; };
+		9C86CEF723657E800052EEEE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86CEF623657E800052EEEE /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +75,17 @@
 		9C86CE99236552BE0052EEEE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9C86CE9C23655AD10052EEEE /* MyHealthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHealthViewController.swift; sourceTree = "<group>"; };
 		9C86CE9E23655AF80052EEEE /* MyHealth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyHealth.storyboard; sourceTree = "<group>"; };
+		9C86CEE1236569620052EEEE /* Messages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
+		9C86CEE32365696F0052EEEE /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		9C86CEE623656A0D0052EEEE /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		9C86CEE823656A5C0052EEEE /* Community.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Community.storyboard; sourceTree = "<group>"; };
+		9C86CEEA2365701F0052EEEE /* SyncGlucoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncGlucoseView.swift; sourceTree = "<group>"; };
+		9C86CEEC2365704A0052EEEE /* SyncGlucoseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SyncGlucoseView.xib; sourceTree = "<group>"; };
+		9C86CEEE2365737E0052EEEE /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		9C86CEF02365795F0052EEEE /* GlucoseAchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseAchievementView.swift; sourceTree = "<group>"; };
+		9C86CEF22365798B0052EEEE /* GlucoseAchievementView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GlucoseAchievementView.xib; sourceTree = "<group>"; };
+		9C86CEF423657E6E0052EEEE /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		9C86CEF623657E800052EEEE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D6210942DD03506327F6BEDB /* Pods-HLTH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLTH.release.xcconfig"; path = "Target Support Files/Pods-HLTH/Pods-HLTH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,14 +150,18 @@
 			isa = PBXGroup;
 			children = (
 				9C86CE5E2364FAE20052EEEE /* AppDelegate.swift */,
-				9C86CEA023655B200052EEEE /* MyHealth */,
-				9C86CE9B236552DC0052EEEE /* Home */,
-				9C86CE962365524F0052EEEE /* Launch */,
-				9C86CE95236552470052EEEE /* Tab */,
 				9C86CE6A2364FAE60052EEEE /* Assets.xcassets */,
-				9C86CE6C2364FAE60052EEEE /* LaunchScreen.storyboard */,
-				9C86CE6F2364FAE60052EEEE /* Info.plist */,
+				9C86CEE5236569FC0052EEEE /* Community */,
 				9C86CE672364FAE20052EEEE /* HLTH.xcdatamodeld */,
+				9C86CE9B236552DC0052EEEE /* Home */,
+				9C86CE6F2364FAE60052EEEE /* Info.plist */,
+				9C86CE962365524F0052EEEE /* Launch */,
+				9C86CE6C2364FAE60052EEEE /* LaunchScreen.storyboard */,
+				9C86CEE0236569470052EEEE /* Messages */,
+				9C86CEA023655B200052EEEE /* MyHealth */,
+				9C86CEF823657E9E0052EEEE /* Settings */,
+				9C86CE95236552470052EEEE /* Tab */,
+				9C86CEEE2365737E0052EEEE /* UIView+Extension.swift */,
 			);
 			path = HLTH;
 			sourceTree = "<group>";
@@ -161,8 +187,8 @@
 		9C86CE95236552470052EEEE /* Tab */ = {
 			isa = PBXGroup;
 			children = (
-				9C86CE912365502A0052EEEE /* TabViewController.swift */,
 				9C86CE932365513F0052EEEE /* Tab.storyboard */,
+				9C86CE912365502A0052EEEE /* TabViewController.swift */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -181,6 +207,10 @@
 			children = (
 				9C86CE97236552950052EEEE /* Home.storyboard */,
 				9C86CE99236552BE0052EEEE /* HomeViewController.swift */,
+				9C86CEEA2365701F0052EEEE /* SyncGlucoseView.swift */,
+				9C86CEEC2365704A0052EEEE /* SyncGlucoseView.xib */,
+				9C86CEF02365795F0052EEEE /* GlucoseAchievementView.swift */,
+				9C86CEF22365798B0052EEEE /* GlucoseAchievementView.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -188,10 +218,37 @@
 		9C86CEA023655B200052EEEE /* MyHealth */ = {
 			isa = PBXGroup;
 			children = (
-				9C86CE9C23655AD10052EEEE /* MyHealthViewController.swift */,
 				9C86CE9E23655AF80052EEEE /* MyHealth.storyboard */,
+				9C86CE9C23655AD10052EEEE /* MyHealthViewController.swift */,
 			);
 			path = MyHealth;
+			sourceTree = "<group>";
+		};
+		9C86CEE0236569470052EEEE /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				9C86CEE1236569620052EEEE /* Messages.storyboard */,
+				9C86CEE32365696F0052EEEE /* MessagesViewController.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		9C86CEE5236569FC0052EEEE /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				9C86CEE823656A5C0052EEEE /* Community.storyboard */,
+				9C86CEE623656A0D0052EEEE /* CommunityViewController.swift */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		9C86CEF823657E9E0052EEEE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9C86CEF423657E6E0052EEEE /* Settings.storyboard */,
+				9C86CEF623657E800052EEEE /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		CFABA62AEBA0DFF8382B9A23 /* Frameworks */ = {
@@ -308,11 +365,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C86CEE923656A5C0052EEEE /* Community.storyboard in Resources */,
 				9C86CE942365513F0052EEEE /* Tab.storyboard in Resources */,
+				9C86CEF523657E6F0052EEEE /* Settings.storyboard in Resources */,
 				9C86CE98236552950052EEEE /* Home.storyboard in Resources */,
 				9C86CE9F23655AF80052EEEE /* MyHealth.storyboard in Resources */,
 				9C86CE6E2364FAE60052EEEE /* LaunchScreen.storyboard in Resources */,
+				9C86CEE2236569620052EEEE /* Messages.storyboard in Resources */,
 				9C86CE6B2364FAE60052EEEE /* Assets.xcassets in Resources */,
+				9C86CEED2365704A0052EEEE /* SyncGlucoseView.xib in Resources */,
+				9C86CEF32365798B0052EEEE /* GlucoseAchievementView.xib in Resources */,
 				9C86CE662364FAE20052EEEE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,12 +442,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C86CEEB2365701F0052EEEE /* SyncGlucoseView.swift in Sources */,
 				9C86CE632364FAE20052EEEE /* LaunchViewController.swift in Sources */,
+				9C86CEE42365696F0052EEEE /* MessagesViewController.swift in Sources */,
 				9C86CE692364FAE20052EEEE /* HLTH.xcdatamodeld in Sources */,
 				9C86CE9D23655AD10052EEEE /* MyHealthViewController.swift in Sources */,
+				9C86CEE723656A0D0052EEEE /* CommunityViewController.swift in Sources */,
 				9C86CE5F2364FAE20052EEEE /* AppDelegate.swift in Sources */,
+				9C86CEF12365795F0052EEEE /* GlucoseAchievementView.swift in Sources */,
 				9C86CE922365502A0052EEEE /* TabViewController.swift in Sources */,
+				9C86CEEF2365737E0052EEEE /* UIView+Extension.swift in Sources */,
 				9C86CE9A236552BE0052EEEE /* HomeViewController.swift in Sources */,
+				9C86CEF723657E800052EEEE /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,7 +637,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = DreamTeam.HLTH2019;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -588,7 +656,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = DreamTeam.HLTH2019;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
