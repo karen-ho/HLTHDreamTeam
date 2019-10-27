@@ -60,8 +60,8 @@
                                             <action selector="closeNotification:" destination="JAK-Ac-cmx" eventType="touchUpInside" id="E9h-yN-NIS"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alice liked your 30 Day Streak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGU-dH-fHk">
-                                        <rect key="frame" x="83" y="21.5" width="234" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alice and nine friends liked your 30 Day Streak!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGU-dH-fHk">
+                                        <rect key="frame" x="83" y="11.5" width="323" height="41"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -71,6 +71,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="2Xf-uI-3Ss" secondAttribute="trailing" id="5dB-ep-7Sj"/>
                                     <constraint firstAttribute="bottom" secondItem="2Xf-uI-3Ss" secondAttribute="bottom" id="A6W-5D-EBs"/>
+                                    <constraint firstAttribute="trailing" secondItem="PGU-dH-fHk" secondAttribute="trailing" constant="8" id="B9U-9v-PZe"/>
                                     <constraint firstItem="PGU-dH-fHk" firstAttribute="centerY" secondItem="7Wd-hV-9bU" secondAttribute="centerY" id="Bst-gf-aPI"/>
                                     <constraint firstItem="2Xf-uI-3Ss" firstAttribute="top" secondItem="7Wd-hV-9bU" secondAttribute="top" id="GBn-T5-8Jt"/>
                                     <constraint firstAttribute="height" constant="64" id="PNI-Ju-uTo"/>
